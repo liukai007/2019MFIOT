@@ -62,6 +62,19 @@
         }
 
 ## 用户管理
++ Data
+    + username (String) 用户名
+    + password (String)  密码
+    + headPortrait (String) 头像链接
+    + phoneNumber (String) 手机号
+    + role (int) 角色（1为管理员 0为普通用户）
+    + originalPassword (String) 原密码（修改密码时候使用）
+    + enabled (int)  - 使能  0禁止 1启用
+    + creator (long) - 创建人
+    + modifier (long) - 修改人
+    + created (date) - 创建时间
+    + modified (date) - 修改时间
+    
 ### 新增用户 [POST] /user
 + Description
     + [MUST] authenticated
@@ -299,6 +312,15 @@
         }
 
 ## 设备分类管理
++ Data
+    + name (String)  设备分类名称
+    + description (String) 描述
+    + picture (String) 图片链接
+    + enabled (int)  - 使能  0禁止 1启用
+    + creator (long) - 创建人
+    + modifier (long) - 修改人
+    + created (date) - 创建时间
+    + modified (date) - 修改时间
 ### 新增设备分类 [POST] /equipmentcategory
 + Description
     + [MUST] authenticated
@@ -521,6 +543,21 @@
 
 
 ## 主设备管理
++ Data
+    + equipmentCategoryId (Long) 设备分类ID
+    + name (String)  设备名字
+    + equipPicture (String) 设备图片
+    + brand (String)  品牌
+    + brandLogo (String) -品牌logo
+    + model (String) -型号
+    + lifetime (Double)  -寿命（可以说使用最长时间单位小时）
+    + description (String) -描述
+    + referenceTime (Long) -被会议室引用了次数
+    + enabled (int)  - 使能  0禁止 1启用
+    + creator (long) - 创建人
+    + modifier (long) - 修改人
+    + created (date) - 创建时间
+    + modified (date) - 修改时间
 ### 新增主设备 [POST] /equipmentlist
 
 + Description
@@ -788,6 +825,18 @@
 
 
 ## 位置管理
++ Data
+    + parentId (long) -父id
+    + name (String) -位置名称
+    + locationNo (int) -位置码（技术人员填写）
+    + description (String) 描述
+    + picture (String) 图片链接
+    + leaf (int) 是否叶子节点（1为叶子节点 0为非叶子节点）
+    + enabled (int)  - 使能  0禁止 1启用
+    + creator (long) - 创建人
+    + modifier (long) - 修改人
+    + created (date) - 创建时间
+    + modified (date) - 修改时间
 ### 新增楼层 [POST] /locations/addfloor
 
 + Description
