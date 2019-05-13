@@ -1,4 +1,5 @@
 # MFIOT管理端接口文档
+
 + 2019年4月12日
     + 图片上传接口
     
@@ -240,6 +241,7 @@
         },
         "data": [
             {
+                "id": 1,
                 "creator": 0,
                 "modifier": 1,
                 "modified": "2019-04-19 19:10:14",
@@ -247,6 +249,7 @@
                 "role": 1
             },
             {
+                "id": 2,
                 "creator": 0,
                 "modifier": 1,
                 "modified": "2019-04-19 19:11:17",
@@ -254,12 +257,14 @@
                 "role": 1
             },
             {
+                "id": 3,
                 "creator": 0,
                 "modifier": 0,
                 "username": "admin1",
                 "role": 0
             },
             {
+                "id": 5,
                 "creator": 0,
                 "modifier": 0,
                 "created": "2019-04-02 10:12:49",
@@ -268,6 +273,7 @@
                 "role": 0
             },
             {
+                "id": 6,
                 "creator": 0,
                 "modifier": 0,
                 "created": "2019-04-02 10:18:34",
@@ -276,42 +282,47 @@
                 "role": 0
             },
             {
+                "id": 8,
                 "creator": 0,
                 "modifier": 0,
-                "created": "2019-04-02 19:12:39",
-                "modified": "2019-04-02 19:12:39",
+                "created": "2019-04-03 07:12:39",
+                "modified": "2019-04-03 07:12:39",
                 "username": "LIUKAI007",
                 "role": 0
             },
             {
+                "id": 9,
                 "creator": 0,
                 "modifier": 0,
-                "created": "2019-04-02 20:28:42",
-                "modified": "2019-04-02 20:28:42",
+                "created": "2019-04-03 08:28:42",
+                "modified": "2019-04-03 08:28:42",
                 "username": "1233LIUKAI007",
                 "role": 0
             },
             {
+                "id": 10,
                 "creator": 0,
                 "modifier": 0,
-                "created": "2019-04-03 10:29:34",
-                "modified": "2019-04-03 10:29:34",
+                "created": "2019-04-03 22:29:34",
+                "modified": "2019-04-03 22:29:34",
                 "username": "lk11",
                 "role": 0
             },
             {
+                "id": 12,
                 "creator": 0,
                 "modifier": 0,
-                "created": "2019-04-04 11:27:05",
-                "modified": "2019-04-04 11:27:05",
+                "created": "2019-04-04 23:27:05",
+                "modified": "2019-04-04 23:27:05",
                 "username": "lk008",
                 "role": 1
             },
             {
+                "id": 13,
                 "creator": 0,
                 "modifier": 0,
-                "created": "2019-04-12 14:34:57",
-                "modified": "2019-04-12 14:34:57",
+                "created": "2019-04-13 02:34:57",
+                "modified": "2019-04-13 02:34:57",
                 "username": "国产007",
                 "role": 0
             }
