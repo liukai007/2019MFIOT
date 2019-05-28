@@ -1,4 +1,5 @@
 # MFIOT管理端接口文档
+https://github.com/liukai007/2019MFIOT/edit/master/mfiot-api.md
 
 + 2019年4月12日
     + 图片上传接口
@@ -37,6 +38,7 @@
 
 + 2019年4月21日
     + 登陆
+    + 登出
 
 + 2019年4月22日
     + 新增指定设备
@@ -1184,7 +1186,9 @@
         
    
 ## 登陆
-### 登陆接口
+
+### 登陆接口 [POST] /login
+
 + Description
 + Request (application/json)
     
@@ -1212,6 +1216,19 @@
             "code": 400
         }
         } 
+
+### 登出接口 [GET] /logout
+
++ Description
++ Response 200
+
+        {
+        "data": {
+            "logout": "logout success"
+        }
+        }
+        
+
 ## 指定设备管理（实际会议室使用设备）
 + Data
     + equipmentNo (int) -设备编号号（记录日志使用）
