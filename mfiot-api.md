@@ -94,11 +94,12 @@ https://github.com/liukai007/2019MFIOT/edit/master/mfiot-api.md
 
         {
         "data": {
-            "username": "user001",
-            "password":"12345678",
-            "headPortrait": "http://www.headPortrait",
-            "phoneNumber":"13126822398",
-            "role":"1"
+          "username": "user001111",
+          "password":"12345678",
+          "headPortrait": "http://www.headPortrait",
+          "phoneNumber":"13126822398",
+          "email":"df@df.com",
+          "role":"1"
         }
         }
 + Response 200
