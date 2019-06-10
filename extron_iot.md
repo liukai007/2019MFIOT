@@ -958,14 +958,17 @@
 ## 实际设备管理
 + Data
     + id (int) id
-    + equipment_name (String)  设备名称
-    + equipment_pic (String)  设备图片
-    + brand (int) 品牌ID
-    + equipment_category (int) 设备分类id
-    + model  (String) 设备型号
-    + description (String) 描述
-    + iscontrolled (int) 是否是受控设备 1为受控设备  0为非受控设备
-    + lifetime (int) 寿命时长（单位秒）
+    + equipment_no (String)  设备编号
+    + ip (String)  ip
+    + port (int)   端口
+    + service_time (int) 服务时长
+    + status (int)   1为正常 0为关闭  2为故障
+    + ismonitor (int)  是否作为监控设备 1为是  0为不是
+    + x_axis (float)  X轴
+    + y_axis (float)  Y轴
+    + unique_id (String)   唯一ID
+    + equipment (int) 
+    + location (int) 
     + enabled (int)  - 使能  0禁止 1启用
     + creator (long) - 创建人
     + modifier (long) - 修改人
@@ -980,37 +983,43 @@
 + Request (application/json)
 
         {
-        "equipment_name": "快思聪中控",
-        "equipment_pic": "www.baid.com",
-        "model": "11",
-        "description": "111",
-        "iscontrolled": 1,
-        "lifetime": 0,
+        "equipment_no": 200022222,
+        "ip": "192.168.2.22",
+        "port": 8081,
+        "service_time": 15,
+        "status": 1,
+        "ismonitor": 1,
+        "x_axis": 222,
+        "y_axis": 333,
+        "unique_id": "sn-2",
         "enabled": 1,
         "creator": 0,
         "modifier": 0,
-        "created": "2019-06-04T18:51:28+08:00",
-        "modified": "2019-06-04T18:51:34+08:00",
-        "brand": 1,
-        "equipment_category": 1
+        "created": "2019-06-10T19:56:25+08:00",
+        "modified": "2019-06-10T19:56:29+08:00",
+        "equipment": 2,
+        "location": 3
         }
 + Response 200
 
         {
-        "id": 24,
-        "equipment_name": "快思聪中控",
-        "equipment_pic": "www.baid.com",
-        "model": "11",
-        "description": "111",
-        "iscontrolled": 1,
-        "lifetime": 0,
+        "id": 3,
+        "equipment_no": 200022222,
+        "ip": "192.168.2.22",
+        "port": 8081,
+        "service_time": 15,
+        "status": 1,
+        "ismonitor": 1,
+        "x_axis": 222,
+        "y_axis": 333,
+        "unique_id": "sn-2",
         "enabled": 1,
         "creator": 0,
         "modifier": 0,
-        "created": "2019-06-04T18:51:28+08:00",
-        "modified": "2019-06-04T18:51:34+08:00",
-        "brand": 1,
-        "equipment_category": 1
+        "created": "2019-06-10T19:56:25+08:00",
+        "modified": "2019-06-10T19:56:29+08:00",
+        "equipment": 2,
+        "location": 3
         }
 + Response 400
 
@@ -1025,7 +1034,7 @@
         "detail": "Not found."
         }
         
-### 删除设备详情 [DEL] /front/api/equipmentdetails/{id}/
+### 删除设备详情 [DEL] /front/api/realityequipment/{id}/
 
 + Description
 
@@ -1037,44 +1046,50 @@
         }
         
 
-### 修改设备详情 [PATCH] /front/api/equipmentdetails/{id}/
+### 修改实际设备 [PATCH] /front/api/realityequipment/{id}/
 
 + Description
 + Request (application/json)
     
         {
-        "equipment_name": "快思聪中控24",
-        "equipment_pic": "www.baid.com",
-        "model": "1124",
-        "description": "11124",
-        "iscontrolled": 1,
-        "lifetime": 0,
+        "equipment_no": 200022222,
+        "ip": "192.168.2.22",
+        "port": 8081,
+        "service_time": 15,
+        "status": 1,
+        "ismonitor": 1,
+        "x_axis": 222,
+        "y_axis": 333,
+        "unique_id": "sn-2",
         "enabled": 1,
         "creator": 0,
         "modifier": 0,
-        "created": "2019-06-04T18:51:28+08:00",
-        "modified": "2019-06-04T18:51:34+08:00",
-        "brand": 1,
-        "equipment_category": 1
+        "created": "2019-06-10T19:56:25+08:00",
+        "modified": "2019-06-10T19:56:29+08:00",
+        "equipment": 2,
+        "location": 3
         }
 
 + Response 200
 
         {
-        "id": 24,
-        "equipment_name": "快思聪中控24",
-        "equipment_pic": "www.baid.com",
-        "model": "1124",
-        "description": "11124",
-        "iscontrolled": 1,
-        "lifetime": 0,
+        "id": 2,
+        "equipment_no": 200022222,
+        "ip": "192.168.2.22",
+        "port": 8081,
+        "service_time": 15,
+        "status": 1,
+        "ismonitor": 1,
+        "x_axis": 222,
+        "y_axis": 333,
+        "unique_id": "sn-2",
         "enabled": 1,
         "creator": 0,
         "modifier": 0,
-        "created": "2019-06-04T18:51:28+08:00",
-        "modified": "2019-06-04T18:51:34+08:00",
-        "brand": 1,
-        "equipment_category": 1
+        "created": "2019-06-10T19:56:25+08:00",
+        "modified": "2019-06-10T19:56:29+08:00",
+        "equipment": 2,
+        "location": 3
         }
 
 + Response 404
