@@ -36,6 +36,7 @@
     + 删除实际设备
     + 修改实际设备
     + 查询实际设备
+    + 查询实际设备列表
 
 ## 图片上传
 ### 图片上传接口 [POST] /front/upload/image
@@ -170,7 +171,7 @@
         "modified": "2019-05-31T21:33:09+08:00"
     }
     
-### 查询品牌列表 [GET] /front/page/brand/?page=1
+### 查询品牌列表 [GET] /front/page/brand/
 + Description
 
 + Parameters
@@ -351,7 +352,7 @@
         "modified": "2019-06-04T18:49:25+08:00"
         }
     
-### 查询分类列表 [GET] /front/page/equipmentcategory/?page=1
+### 查询分类列表 [GET] /front/page/equipmentcategory/
 + Description
 
 + Parameters
@@ -544,7 +545,7 @@
         "equipment_category": 1
         }
     
-### 查询设备详情列表 [GET] /front/page/equipmentdetails/?page=2
+### 查询设备详情列表 [GET] /front/page/equipmentdetails/
 + Description
 
 + Parameters
@@ -895,7 +896,7 @@
         }
   
   
-### 查询设备详情列表 [GET] /front/page/location/?page=2
+### 查询设备详情列表 [GET] /front/page/location/
 + Description
 
 + Parameters
@@ -1106,7 +1107,7 @@
         "location": 3
         }
     
-### 查询实际设备列表 [GET] /front/page/realityequipment/?page=1
+### 查询实际设备列表 [GET] /front/page/realityequipment/
 + Description
 
 + Parameters
