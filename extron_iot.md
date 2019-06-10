@@ -358,6 +358,7 @@
 + Parameters
     + page (int)  页码  -非必填 默认为1
     + size (int)   页尺 -非必填 默认1000
+    + categoryname (String) 分类名称  -非必填模糊查询
 
 + Response 200
 
@@ -403,11 +404,15 @@
     + equipment_name (String)  设备名称
     + equipment_pic (String)  设备图片
     + brand (int) 品牌ID
+    + brand_name  (String) 品牌名字
+    + brand_logo (String) 品牌logo
     + equipment_category (int) 设备分类id
+    + equipment_category_name (String) 设备分类名字
+    + equipment_category_pic (String) 设备分类图片
     + model  (String) 设备型号
     + description (String) 描述
     + iscontrolled (int) 是否是受控设备 1为受控设备  0为非受控设备
-    + lifetime (int) 寿命时长（单位秒）
+    + lifetime (int) 寿命时长（单位分钟）
     + enabled (int)  - 使能  0禁止 1启用
     + creator (long) - 创建人
     + modifier (long) - 修改人
@@ -439,9 +444,15 @@
 + Response 200
 
         {
-        "id": 24,
+        "id": 26,
         "equipment_name": "快思聪中控",
         "equipment_pic": "www.baid.com",
+        "brand": 1,
+        "brand_name": "ev22i",
+        "brand_logo": "www.baidu.com12",
+        "equipment_category": 1,
+        "equipment_category_name": "音响",
+        "equipment_category_pic": "www",
         "model": "11",
         "description": "111",
         "iscontrolled": 1,
@@ -450,9 +461,7 @@
         "creator": 0,
         "modifier": 0,
         "created": "2019-06-04T18:51:28+08:00",
-        "modified": "2019-06-04T18:51:34+08:00",
-        "brand": 1,
-        "equipment_category": 1
+        "modified": "2019-06-04T18:51:34+08:00"
         }
 + Response 400
 
@@ -506,6 +515,12 @@
         "id": 24,
         "equipment_name": "快思聪中控24",
         "equipment_pic": "www.baid.com",
+        "brand": 1,
+        "brand_name": "ev22i",
+        "brand_logo": "www.baidu.com12",
+        "equipment_category": 1,
+        "equipment_category_name": "音响",
+        "equipment_category_pic": "www",
         "model": "1124",
         "description": "11124",
         "iscontrolled": 1,
@@ -514,9 +529,7 @@
         "creator": 0,
         "modifier": 0,
         "created": "2019-06-04T18:51:28+08:00",
-        "modified": "2019-06-04T18:51:34+08:00",
-        "brand": 1,
-        "equipment_category": 1
+        "modified": "2019-06-04T18:51:34+08:00"
         }
 
 + Response 404
@@ -530,19 +543,24 @@
 + Response 200
 
         {
-        "equipment_name": "快思聪中控24",
+        "id": 26,
+        "equipment_name": "快思聪中控",
         "equipment_pic": "www.baid.com",
-        "model": "1124",
-        "description": "11124",
+        "brand": 1,
+        "brand_name": "ev22i",
+        "brand_logo": "www.baidu.com12",
+        "equipment_category": 1,
+        "equipment_category_name": "音响",
+        "equipment_category_pic": "www",
+        "model": "11",
+        "description": "111",
         "iscontrolled": 1,
         "lifetime": 0,
         "enabled": 1,
         "creator": 0,
         "modifier": 0,
         "created": "2019-06-04T18:51:28+08:00",
-        "modified": "2019-06-04T18:51:34+08:00",
-        "brand": 1,
-        "equipment_category": 1
+        "modified": "2019-06-04T18:51:34+08:00"
         }
     
 ### 查询设备详情列表 [GET] /front/page/equipmentdetails/
@@ -551,22 +569,30 @@
 + Parameters
     + page (int)  页码  -非必填 默认为1
     + size (int)   页尺 -非必填 默认1000
+    + equipmentname (String) 设备名称 -非必填
+    + model (String) 型号  -非必填
 
 + Response 200
 
         {
-        "totalElements": 24,
-        "totalPages": 3,
-        "size": 10,
-        "first": "http://127.0.0.1:8000/front/page/equipmentdetails/?page=1",
-        "last": "http://127.0.0.1:8000/front/page/equipmentdetails/?page=3",
-        "next": "http://127.0.0.1:8000/front/page/equipmentdetails/?page=3",
-        "previous": "http://127.0.0.1:8000/front/page/equipmentdetails/",
+        "totalElements": 25,
+        "totalPages": 13,
+        "size": 2,
+        "first": "http://127.0.0.1:8000/front/page/equipmentdetails/?page=1&size=2",
+        "last": "http://127.0.0.1:8000/front/page/equipmentdetails/?page=13&size=2",
+        "next": "http://127.0.0.1:8000/front/page/equipmentdetails/?page=2&size=2",
+        "previous": null,
         "results": [
         {
-            "id": 11,
-            "equipment_name": "快思聪中控",
-            "equipment_pic": "www.baid.com",
+            "id": 1,
+            "equipment_name": "ss",
+            "equipment_pic": "pic",
+            "brand": 1,
+            "brand_name": "ev22i",
+            "brand_logo": "www.baidu.com12",
+            "equipment_category": 1,
+            "equipment_category_name": "音响",
+            "equipment_category_pic": "www",
             "model": "11",
             "description": "111",
             "iscontrolled": 1,
@@ -575,14 +601,18 @@
             "creator": 0,
             "modifier": 0,
             "created": "2019-06-04T18:51:28+08:00",
-            "modified": "2019-06-04T18:51:34+08:00",
-            "brand": 1,
-            "equipment_category": 1
+            "modified": "2019-06-04T18:51:34+08:00"
         },
         {
-            "id": 12,
+            "id": 2,
             "equipment_name": "快思聪中控",
             "equipment_pic": "www.baid.com",
+            "brand": 1,
+            "brand_name": "ev22i",
+            "brand_logo": "www.baidu.com12",
+            "equipment_category": 1,
+            "equipment_category_name": "音响",
+            "equipment_category_pic": "www",
             "model": "11",
             "description": "111",
             "iscontrolled": 1,
@@ -591,137 +621,7 @@
             "creator": 0,
             "modifier": 0,
             "created": "2019-06-04T18:51:28+08:00",
-            "modified": "2019-06-04T18:51:34+08:00",
-            "brand": 1,
-            "equipment_category": 1
-        },
-        {
-            "id": 13,
-            "equipment_name": "快思聪中控",
-            "equipment_pic": "www.baid.com",
-            "model": "11",
-            "description": "111",
-            "iscontrolled": 1,
-            "lifetime": 0,
-            "enabled": 1,
-            "creator": 0,
-            "modifier": 0,
-            "created": "2019-06-04T18:51:28+08:00",
-            "modified": "2019-06-04T18:51:34+08:00",
-            "brand": 1,
-            "equipment_category": 1
-        },
-        {
-            "id": 14,
-            "equipment_name": "快思聪中控",
-            "equipment_pic": "www.baid.com",
-            "model": "11",
-            "description": "111",
-            "iscontrolled": 1,
-            "lifetime": 0,
-            "enabled": 1,
-            "creator": 0,
-            "modifier": 0,
-            "created": "2019-06-04T18:51:28+08:00",
-            "modified": "2019-06-04T18:51:34+08:00",
-            "brand": 1,
-            "equipment_category": 1
-        },
-        {
-            "id": 15,
-            "equipment_name": "快思聪中控",
-            "equipment_pic": "www.baid.com",
-            "model": "11",
-            "description": "111",
-            "iscontrolled": 1,
-            "lifetime": 0,
-            "enabled": 1,
-            "creator": 0,
-            "modifier": 0,
-            "created": "2019-06-04T18:51:28+08:00",
-            "modified": "2019-06-04T18:51:34+08:00",
-            "brand": 1,
-            "equipment_category": 1
-        },
-        {
-            "id": 16,
-            "equipment_name": "快思聪中控",
-            "equipment_pic": "www.baid.com",
-            "model": "11",
-            "description": "111",
-            "iscontrolled": 1,
-            "lifetime": 0,
-            "enabled": 1,
-            "creator": 0,
-            "modifier": 0,
-            "created": "2019-06-04T18:51:28+08:00",
-            "modified": "2019-06-04T18:51:34+08:00",
-            "brand": 1,
-            "equipment_category": 1
-        },
-        {
-            "id": 17,
-            "equipment_name": "快思聪中控",
-            "equipment_pic": "www.baid.com",
-            "model": "11",
-            "description": "111",
-            "iscontrolled": 1,
-            "lifetime": 0,
-            "enabled": 1,
-            "creator": 0,
-            "modifier": 0,
-            "created": "2019-06-04T18:51:28+08:00",
-            "modified": "2019-06-04T18:51:34+08:00",
-            "brand": 1,
-            "equipment_category": 1
-        },
-        {
-            "id": 18,
-            "equipment_name": "快思聪中控",
-            "equipment_pic": "www.baid.com",
-            "model": "11",
-            "description": "111",
-            "iscontrolled": 1,
-            "lifetime": 0,
-            "enabled": 1,
-            "creator": 0,
-            "modifier": 0,
-            "created": "2019-06-04T18:51:28+08:00",
-            "modified": "2019-06-04T18:51:34+08:00",
-            "brand": 1,
-            "equipment_category": 1
-        },
-        {
-            "id": 19,
-            "equipment_name": "快思聪中控",
-            "equipment_pic": "www.baid.com",
-            "model": "11",
-            "description": "111",
-            "iscontrolled": 1,
-            "lifetime": 0,
-            "enabled": 1,
-            "creator": 0,
-            "modifier": 0,
-            "created": "2019-06-04T18:51:28+08:00",
-            "modified": "2019-06-04T18:51:34+08:00",
-            "brand": 1,
-            "equipment_category": 1
-        },
-        {
-            "id": 20,
-            "equipment_name": "快思聪中控",
-            "equipment_pic": "www.baid.com",
-            "model": "11",
-            "description": "111",
-            "iscontrolled": 1,
-            "lifetime": 0,
-            "enabled": 1,
-            "creator": 0,
-            "modifier": 0,
-            "created": "2019-06-04T18:51:28+08:00",
-            "modified": "2019-06-04T18:51:34+08:00",
-            "brand": 1,
-            "equipment_category": 1
+            "modified": "2019-06-04T18:51:34+08:00"
         }
         ]
         }
@@ -902,6 +802,9 @@
 + Parameters
     + page (int)  页码  -非必填 默认为1
     + size (int)   页尺 -非必填 默认1000
+    + locationname (String) 位置名称模糊查询
+    + isconference (int) 是否会议室 1是 0不是
+    + leaf (int) 是否叶子节点 1是 0不是
 
 + Response 200
 
@@ -968,7 +871,9 @@
     + y_axis (float)  Y轴
     + unique_id (String)   唯一ID
     + equipment (int) 
+    + equipment_name (String) 设备名称
     + location (int) 
+    + location_name (String) 位置名称
     + enabled (int)  - 使能  0禁止 1启用
     + creator (long) - 创建人
     + modifier (long) - 修改人
@@ -1003,23 +908,25 @@
 + Response 200
 
         {
-        "id": 3,
-        "equipment_no": 200022222,
-        "ip": "192.168.2.22",
-        "port": 8081,
+        "id": 1,
+        "equipment_no": 20001,
+        "equipment": 1,
+        "equipment_name": "ss",
+        "location": 2,
+        "location_name": "一层会议室",
+        "ip": "192.168.1.22",
+        "port": 8008,
         "service_time": 15,
         "status": 1,
-        "ismonitor": 1,
-        "x_axis": 222,
-        "y_axis": 333,
-        "unique_id": "sn-2",
+        "ismonitor": 0,
+        "x_axis": 22,
+        "y_axis": 56,
+        "unique_id": "sn-1",
         "enabled": 1,
         "creator": 0,
         "modifier": 0,
-        "created": "2019-06-10T19:56:25+08:00",
-        "modified": "2019-06-10T19:56:29+08:00",
-        "equipment": 2,
-        "location": 3
+        "created": "2019-06-10T19:55:32+08:00",
+        "modified": "2019-06-10T19:55:35+08:00"
         }
 + Response 400
 
@@ -1075,6 +982,10 @@
         {
         "id": 2,
         "equipment_no": 200022222,
+        "equipment": 1,
+        "equipment_name": "ss",
+        "location": 2,
+        "location_name": "一层会议室",
         "ip": "192.168.2.22",
         "port": 8081,
         "service_time": 15,
@@ -1088,8 +999,6 @@
         "modifier": 0,
         "created": "2019-06-10T19:56:25+08:00",
         "modified": "2019-06-10T19:56:29+08:00",
-        "equipment": 2,
-        "location": 3
         }
 
 + Response 404
@@ -1103,23 +1012,25 @@
 + Response 200
 
         {
-        "id": 2,
-        "equipment_no": 20002,
-        "ip": "192.168.2.22",
-        "port": 8081,
+        "id": 1,
+        "equipment_no": 20001,
+        "equipment": 1,
+        "equipment_name": "ss",
+        "location": 2,
+        "location_name": "一层会议室",
+        "ip": "192.168.1.22",
+        "port": 8008,
         "service_time": 15,
         "status": 1,
-        "ismonitor": 1,
-        "x_axis": 222,
-        "y_axis": 333,
-        "unique_id": "sn-2",
+        "ismonitor": 0,
+        "x_axis": 22,
+        "y_axis": 56,
+        "unique_id": "sn-1",
         "enabled": 1,
         "creator": 0,
         "modifier": 0,
-        "created": "2019-06-10T19:56:25+08:00",
-        "modified": "2019-06-10T19:56:29+08:00",
-        "equipment": 2,
-        "location": 3
+        "created": "2019-06-10T19:55:32+08:00",
+        "modified": "2019-06-10T19:55:35+08:00"
         }
     
 ### 查询实际设备列表 [GET] /front/page/realityequipment/
@@ -1128,13 +1039,14 @@
 + Parameters
     + page (int)  页码  -非必填 默认为1
     + size (int)   页尺 -非必填 默认1000
+    + ismonitor  (int) 1为监控设备 0为非监控设备
 
 + Response 200
 
        {
-        "totalElements": 2,
+        "totalElements": 3,
         "totalPages": 1,
-        "size": 10,
+        "size": 1000,
         "first": "http://127.0.0.1:8000/front/page/realityequipment/?page=1",
         "last": "http://127.0.0.1:8000/front/page/realityequipment/?page=1",
         "next": null,
@@ -1143,6 +1055,10 @@
         {
             "id": 1,
             "equipment_no": 20001,
+            "equipment": 1,
+            "equipment_name": "ss",
+            "location": 2,
+            "location_name": "一层会议室",
             "ip": "192.168.1.22",
             "port": 8008,
             "service_time": 15,
@@ -1155,13 +1071,15 @@
             "creator": 0,
             "modifier": 0,
             "created": "2019-06-10T19:55:32+08:00",
-            "modified": "2019-06-10T19:55:35+08:00",
-            "equipment": 1,
-            "location": 2
+            "modified": "2019-06-10T19:55:35+08:00"
         },
         {
             "id": 2,
-            "equipment_no": 20002,
+            "equipment_no": 200022222,
+            "equipment": 2,
+            "equipment_name": "快思聪中控2",
+            "location": 3,
+            "location_name": "一层会议室",
             "ip": "192.168.2.22",
             "port": 8081,
             "service_time": 15,
@@ -1174,9 +1092,28 @@
             "creator": 0,
             "modifier": 0,
             "created": "2019-06-10T19:56:25+08:00",
-            "modified": "2019-06-10T19:56:29+08:00",
+            "modified": "2019-06-10T19:56:29+08:00"
+        },
+        {
+            "id": 3,
+            "equipment_no": 200022222,
             "equipment": 2,
-            "location": 3
+            "equipment_name": "快思聪中控2",
+            "location": 3,
+            "location_name": "一层会议室",
+            "ip": "192.168.2.22",
+            "port": 8081,
+            "service_time": 15,
+            "status": 1,
+            "ismonitor": 1,
+            "x_axis": 222,
+            "y_axis": 333,
+            "unique_id": "sn-2",
+            "enabled": 1,
+            "creator": 0,
+            "modifier": 0,
+            "created": "2019-06-10T19:56:25+08:00",
+            "modified": "2019-06-10T19:56:29+08:00"
         }
         ]
         }
