@@ -30,6 +30,8 @@
     + 修改位置
     + 查询位置
     + 查询位置列表
+    + 得到楼层
+    + 根据楼层得到会议室
 
 + 2019年6月10日
     + 新增实际设备
@@ -717,7 +719,7 @@
         }
         
 
-### 修改设备详情 [PATCH] /front/api/location/{id}/
+### 修改位置节点 [PATCH] /front/api/location/{id}/
 
 + Description
 + Request (application/json)
@@ -767,7 +769,7 @@
         "detail": "Not found."
         }
 
-### 查询设备详情 [GET] /front/api/location/{id}/
+### 查询位置节点 [GET] /front/api/location/{id}/
 + Description
 + Response 200
 
@@ -796,7 +798,7 @@
         }
   
   
-### 查询设备详情列表 [GET] /front/page/location/
+### 查询位置列表 [GET] /front/page/location/
 + Description
 
 + Parameters
@@ -855,8 +857,49 @@
         }
     ]
     }
+    
+### 得到楼层 [GET] /front/getfloor/?isfloor=1
 
++ Response 200
+    
+        {
+        "results": [
+        {
+            "id": 13,
+            "location_name": "一层"
+        },
+        {
+            "id": 14,
+            "location_name": "8层"
+        }
+        ]
+        }
 
+### 根据楼层得到会议室 [GET] /front/getfloor/?isconference=1
+
++ Parameters
+    + parentid (int)  楼层id  -必填
+    + isconference (int)  是否会议室1为会议室 0为非会议室
+
++ Response 200
+
+        {
+        "results": [
+        {
+            "id": 2,
+            "location_name": "一层会议室A"
+        },
+        {
+            "id": 3,
+            "location_name": "一层会议室B"
+        },
+        {
+            "id": 4,
+            "location_name": "一层会议室C"
+        }
+        ]
+        }
+    
 
 ## 实际设备管理
 + Data
@@ -1034,12 +1077,16 @@
         }
     
 ### 查询实际设备列表 [GET] /front/page/realityequipment/
+例如：http://127.0.0.1:8000/front/page/realityequipment/?brandids=1,2&categoryids=4&localids=3,4
 + Description
 
 + Parameters
     + page (int)  页码  -非必填 默认为1
     + size (int)   页尺 -非必填 默认1000
     + ismonitor  (int) 1为监控设备 0为非监控设备
+    + brandids (String) 品牌ids -非必填
+    + categoryids (String) 分类ids -非必填
+    + localids (String) 位置ids -非必填
 
 + Response 200
 
@@ -1047,39 +1094,25 @@
         "totalElements": 3,
         "totalPages": 1,
         "size": 1000,
-        "first": "http://127.0.0.1:8000/front/page/realityequipment/?page=1",
-        "last": "http://127.0.0.1:8000/front/page/realityequipment/?page=1",
+        "first": "http://127.0.0.1:8000/front/page/realityequipment/?brandids=1%2C2&categoryids=4&localids=3%2C4&page=1",
+        "last": "http://127.0.0.1:8000/front/page/realityequipment/?brandids=1%2C2&categoryids=4&localids=3%2C4&page=1",
         "next": null,
         "previous": null,
         "results": [
-        {
-            "id": 1,
-            "equipment_no": 20001,
-            "equipment": 1,
-            "equipment_name": "ss",
-            "location": 2,
-            "location_name": "一层会议室",
-            "ip": "192.168.1.22",
-            "port": 8008,
-            "service_time": 15,
-            "status": 1,
-            "ismonitor": 0,
-            "x_axis": 22,
-            "y_axis": 56,
-            "unique_id": "sn-1",
-            "enabled": 1,
-            "creator": 0,
-            "modifier": 0,
-            "created": "2019-06-10T19:55:32+08:00",
-            "modified": "2019-06-10T19:55:35+08:00"
-        },
-        {
-            "id": 2,
+            {
+            "id": 3,
+            "loucengid": 13,
+            "louchengname": "一层",
             "equipment_no": 200022222,
             "equipment": 2,
-            "equipment_name": "快思聪中控2",
+            "equipment_name": "AMX矩阵",
             "location": 3,
-            "location_name": "一层会议室",
+            "location_name": "一层会议室B",
+            "brandid": 1,
+            "brandname": "AMX",
+            "categoryid": 4,
+            "categoryname": "音频矩阵",
+            "equipmentpic": "www.baid.com",
             "ip": "192.168.2.22",
             "port": 8081,
             "service_time": 15,
@@ -1095,12 +1128,19 @@
             "modified": "2019-06-10T19:56:29+08:00"
         },
         {
-            "id": 3,
+            "id": 2,
+            "loucengid": 13,
+            "louchengname": "一层",
             "equipment_no": 200022222,
             "equipment": 2,
-            "equipment_name": "快思聪中控2",
-            "location": 3,
-            "location_name": "一层会议室",
+            "equipment_name": "AMX矩阵",
+            "location": 4,
+            "location_name": "一层会议室C",
+            "brandid": 1,
+            "brandname": "AMX",
+            "categoryid": 4,
+            "categoryname": "音频矩阵",
+            "equipmentpic": "www.baid.com",
             "ip": "192.168.2.22",
             "port": 8081,
             "service_time": 15,
