@@ -23,6 +23,7 @@
     + 修改设备详情
     + 查询设备详情
     + 查询设备列表
+    + 受控设备统计接口
 
 + 2019年6月10日
     + 新增位置
@@ -412,6 +413,7 @@
     + equipment_category_name (String) 设备分类名字
     + equipment_category_pic (String) 设备分类图片
     + model  (String) 设备型号
+    + quipmente_amount (int)  实际设备其引用次数
     + description (String) 描述
     + iscontrolled (int) 是否是受控设备 1为受控设备  0为非受控设备
     + lifetime (int) 寿命时长（单位分钟）
@@ -565,7 +567,7 @@
         "modified": "2019-06-04T18:51:34+08:00"
         }
     
-### 查询设备详情列表 [GET] /front/page/equipmentdetails/
+### 查询设备列表 [GET] /front/page/equipmentdetails/
 + Description
 
 + Parameters
@@ -577,26 +579,27 @@
 + Response 200
 
         {
-        "totalElements": 25,
-        "totalPages": 13,
+        "totalElements": 42,
+        "totalPages": 21,
         "size": 2,
         "first": "http://127.0.0.1:8000/front/page/equipmentdetails/?page=1&size=2",
-        "last": "http://127.0.0.1:8000/front/page/equipmentdetails/?page=13&size=2",
+        "last": "http://127.0.0.1:8000/front/page/equipmentdetails/?page=21&size=2",
         "next": "http://127.0.0.1:8000/front/page/equipmentdetails/?page=2&size=2",
         "previous": null,
         "results": [
         {
             "id": 1,
-            "equipment_name": "ss",
+            "equipment_name": "鹅颈电容传声器",
             "equipment_pic": "pic",
             "brand": 1,
-            "brand_name": "ev22i",
-            "brand_logo": "www.baidu.com12",
+            "brand_name": "SENNHEISER",
+            "brand_logo": "http://static.mifanxing.com/yyren/image/107/28/1862592.jpg?w=200&h=90",
             "equipment_category": 1,
-            "equipment_category_name": "音响",
-            "equipment_category_pic": "www",
-            "model": "11",
-            "description": "111",
+            "equipment_category_name": "音频系统",
+            "equipment_category_pic": "www图",
+            "model": "MEG 14-40-L-II ",
+            "quipmente_amount": 1,
+            "description": "extron001",
             "iscontrolled": 1,
             "lifetime": 0,
             "enabled": 1,
@@ -607,15 +610,16 @@
         },
         {
             "id": 2,
-            "equipment_name": "快思聪中控",
+            "equipment_name": "无线手持话筒套装",
             "equipment_pic": "www.baid.com",
             "brand": 1,
-            "brand_name": "ev22i",
-            "brand_logo": "www.baidu.com12",
+            "brand_name": "SENNHEISER",
+            "brand_logo": "http://static.mifanxing.com/yyren/image/107/28/1862592.jpg?w=200&h=90",
             "equipment_category": 1,
-            "equipment_category_name": "音响",
-            "equipment_category_pic": "www",
-            "model": "11",
+            "equipment_category_name": "音频系统",
+            "equipment_category_pic": "www图",
+            "model": "SL HANDHELD SET DW",
+            "quipmente_amount": 1,
             "description": "111",
             "iscontrolled": 1,
             "lifetime": 0,
@@ -627,6 +631,69 @@
         }
         ]
         }
+
+
+### 受控设备统计接口 [GET] /front/page/equipmentdetails/?iscontrolled=1
++ Description
+
++ Parameters
+  
++ Response 200
+
+        {
+        "totalElements": 42,
+        "totalPages": 21,
+        "size": 2,
+        "first": "http://127.0.0.1:8000/front/page/equipmentdetails/?page=1&size=2",
+        "last": "http://127.0.0.1:8000/front/page/equipmentdetails/?page=21&size=2",
+        "next": "http://127.0.0.1:8000/front/page/equipmentdetails/?page=2&size=2",
+        "previous": null,
+        "results": [
+        {
+            "id": 1,
+            "equipment_name": "鹅颈电容传声器",
+            "equipment_pic": "pic",
+            "brand": 1,
+            "brand_name": "SENNHEISER",
+            "brand_logo": "http://static.mifanxing.com/yyren/image/107/28/1862592.jpg?w=200&h=90",
+            "equipment_category": 1,
+            "equipment_category_name": "音频系统",
+            "equipment_category_pic": "www图",
+            "model": "MEG 14-40-L-II ",
+            "quipmente_amount": 1,
+            "description": "extron001",
+            "iscontrolled": 1,
+            "lifetime": 0,
+            "enabled": 1,
+            "creator": 0,
+            "modifier": 0,
+            "created": "2019-06-04T18:51:28+08:00",
+            "modified": "2019-06-04T18:51:34+08:00"
+        },
+        {
+            "id": 2,
+            "equipment_name": "无线手持话筒套装",
+            "equipment_pic": "www.baid.com",
+            "brand": 1,
+            "brand_name": "SENNHEISER",
+            "brand_logo": "http://static.mifanxing.com/yyren/image/107/28/1862592.jpg?w=200&h=90",
+            "equipment_category": 1,
+            "equipment_category_name": "音频系统",
+            "equipment_category_pic": "www图",
+            "model": "SL HANDHELD SET DW",
+            "quipmente_amount": 1,
+            "description": "111",
+            "iscontrolled": 1,
+            "lifetime": 0,
+            "enabled": 1,
+            "creator": 0,
+            "modifier": 0,
+            "created": "2019-06-04T18:51:28+08:00",
+            "modified": "2019-06-04T18:51:34+08:00"
+        }
+        ]
+        }
+
 
 
 
@@ -1077,7 +1144,7 @@
         }
     
 ### 查询实际设备列表 [GET] /front/page/realityequipment/
-例如：http://127.0.0.1:8000/front/page/realityequipment/?brandids=1,2&categoryids=4&localids=3,4
+例如：http://127.0.0.1:8000/front/page/realityequipment/?brandids=1,2&categoryids=&page=1&size=2
 + Description
 
 + Parameters
@@ -1090,70 +1157,72 @@
 
 + Response 200
 
-       {
-        "totalElements": 3,
-        "totalPages": 1,
-        "size": 1000,
-        "first": "http://127.0.0.1:8000/front/page/realityequipment/?brandids=1%2C2&categoryids=4&localids=3%2C4&page=1",
-        "last": "http://127.0.0.1:8000/front/page/realityequipment/?brandids=1%2C2&categoryids=4&localids=3%2C4&page=1",
-        "next": null,
+        {
+        "totalElements": 15,
+        "totalPages": 8,
+        "size": 2,
+        "first": "http://127.0.0.1:8000/front/page/realityequipment/?brandids=1%2C2&categoryids=&localids=5&page=1&size=2",
+        "last": "http://127.0.0.1:8000/front/page/realityequipment/?brandids=1%2C2&categoryids=&localids=5&page=8&size=2",
+        "next": "http://127.0.0.1:8000/front/page/realityequipment/?brandids=1%2C2&categoryids=&localids=5&page=2&size=2",
         "previous": null,
         "results": [
             {
-            "id": 3,
-            "loucengid": 13,
-            "louchengname": "一层",
-            "equipment_no": 200022222,
-            "equipment": 2,
-            "equipment_name": "AMX矩阵",
-            "location": 3,
-            "location_name": "一层会议室B",
+            "id": 10,
+            "loucengid": 2,
+            "louchengname": "六层",
+            "equipment_no": 2010,
+            "equipment": 1,
+            "equipment_name": "鹅颈电容传声器",
+            "location": 5,
+            "location_name": "中会议室",
             "brandid": 1,
-            "brandname": "AMX",
-            "categoryid": 4,
-            "categoryname": "音频矩阵",
-            "equipmentpic": "www.baid.com",
-            "ip": "192.168.2.22",
-            "port": 8081,
-            "service_time": 15,
-            "status": 1,
-            "ismonitor": 1,
-            "x_axis": 222,
-            "y_axis": 333,
-            "unique_id": "sn-2",
+            "brandname": "SENNHEISER",
+            "categoryid": 1,
+            "categoryname": "音频系统",
+            "equipmentpic": "pic",
+            "model": "MEG 14-40-L-II ",
+            "ip": null,
+            "port": null,
+            "service_time": 0,
+            "status": 0,
+            "ismonitor": 0,
+            "x_axis": null,
+            "y_axis": null,
+            "unique_id": null,
             "enabled": 1,
             "creator": 0,
             "modifier": 0,
-            "created": "2019-06-10T19:56:25+08:00",
-            "modified": "2019-06-10T19:56:29+08:00"
-        },
-        {
-            "id": 2,
-            "loucengid": 13,
-            "louchengname": "一层",
-            "equipment_no": 200022222,
+            "created": null,
+            "modified": null
+            },
+            {
+            "id": 11,
+            "loucengid": 2,
+            "louchengname": "六层",
+            "equipment_no": 2011,
             "equipment": 2,
-            "equipment_name": "AMX矩阵",
-            "location": 4,
-            "location_name": "一层会议室C",
+            "equipment_name": "无线手持话筒套装",
+            "location": 5,
+            "location_name": "中会议室",
             "brandid": 1,
-            "brandname": "AMX",
-            "categoryid": 4,
-            "categoryname": "音频矩阵",
+            "brandname": "SENNHEISER",
+            "categoryid": 1,
+            "categoryname": "音频系统",
             "equipmentpic": "www.baid.com",
-            "ip": "192.168.2.22",
-            "port": 8081,
-            "service_time": 15,
-            "status": 1,
-            "ismonitor": 1,
-            "x_axis": 222,
-            "y_axis": 333,
-            "unique_id": "sn-2",
+            "model": "SL HANDHELD SET DW",
+            "ip": null,
+            "port": null,
+            "service_time": 0,
+            "status": 0,
+            "ismonitor": 0,
+            "x_axis": null,
+            "y_axis": null,
+            "unique_id": null,
             "enabled": 1,
             "creator": 0,
             "modifier": 0,
-            "created": "2019-06-10T19:56:25+08:00",
-            "modified": "2019-06-10T19:56:29+08:00"
-        }
-        ]
-        }
+            "created": null,
+            "modified": null
+            }
+            ]
+            }
