@@ -90,25 +90,21 @@
 + Request (application/json)
 
         {
-            "brand_name": "test",
-            "brand_logo": "test11",
-            "enabled": 1,
-            "creator": 1,
-            "modifier": 1,
-            "created": "2019-01-01 12:12",
-            "modified": "2019-01-01 12:12"
+        "brand_name": "test11",
+        "brand_logo": "test11",
+        "enabled": 1
         }
 + Response 200
 
         {
-            "id": 15,
-            "brand_name": "test",
-            "brand_logo": "test11",
-            "enabled": 1,
-            "creator": 1,
-            "modifier": 1,
-            "created": "2019-01-01T12:12:00+08:00",
-            "modified": "2019-01-01T12:12:00+08:00"
+        "id": 101,
+        "brand_name": "test",
+        "brand_logo": "test11",
+        "enabled": 1,
+        "creator": 0,
+        "modifier": 0,
+        "created": "2019-06-13T10:24:16.076622+08:00",
+        "modified": "2019-06-13T10:24:16.077622+08:00"
         }
 + Response 400
 
@@ -269,11 +265,7 @@
         "category_name": "音响2",
         "category_description": "音响",
         "category_pic": "www",
-        "enabled": 1,
-        "creator": 0,
-        "modifier": 0,
-        "created": "2019-06-04T18:49:21+08:00",
-        "modified": "2019-06-04T18:49:25+08:00"
+        "enabled": 1
         }
 + Response 200
 
@@ -438,10 +430,6 @@
         "iscontrolled": 1,
         "lifetime": 0,
         "enabled": 1,
-        "creator": 0,
-        "modifier": 0,
-        "created": "2019-06-04T18:51:28+08:00",
-        "modified": "2019-06-04T18:51:34+08:00",
         "brand": 1,
         "equipment_category": 1
         }
@@ -504,11 +492,6 @@
         "description": "11124",
         "iscontrolled": 1,
         "lifetime": 0,
-        "enabled": 1,
-        "creator": 0,
-        "modifier": 0,
-        "created": "2019-06-04T18:51:28+08:00",
-        "modified": "2019-06-04T18:51:34+08:00",
         "brand": 1,
         "equipment_category": 1
         }
@@ -734,12 +717,7 @@
         "x_axis": 66,
         "y_axis": 44,
         "status": 1,
-        "isconference": 0,
-        "enabled": 1,
-        "creator": 0,
-        "modifier": 0,
-        "created": "2019-06-10T19:09:53+08:00",
-        "modified": "2019-06-10T19:09:55+08:00"
+        "isconference": 0
         }
 + Response 200
 
@@ -802,11 +780,7 @@
         "y_axis": 44,
         "status": 1,
         "isconference": 0,
-        "enabled": 1,
-        "creator": 0,
-        "modifier": 0,
-        "created": "2019-06-10T19:09:53+08:00",
-        "modified": "2019-06-10T19:09:55+08:00"
+        "enabled": 1
         }
 
 + Response 200
@@ -1007,11 +981,7 @@
         "x_axis": 222,
         "y_axis": 333,
         "unique_id": "sn-2",
-        "enabled": 1,
-        "creator": 0,
-        "modifier": 0,
-        "created": "2019-06-10T19:56:25+08:00",
-        "modified": "2019-06-10T19:56:29+08:00",
+        "enabled": 1
         "equipment": 2,
         "location": 3
         }
@@ -1079,10 +1049,6 @@
         "y_axis": 333,
         "unique_id": "sn-2",
         "enabled": 1,
-        "creator": 0,
-        "modifier": 0,
-        "created": "2019-06-10T19:56:25+08:00",
-        "modified": "2019-06-10T19:56:29+08:00",
         "equipment": 2,
         "location": 3
         }
