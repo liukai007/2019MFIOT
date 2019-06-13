@@ -945,10 +945,24 @@
 ## 实际设备管理
 + Data
     + id (int) id
+    + loucengid  (int) 楼层id
+    + louchengname (String) 楼层名字
     + equipment_no (String)  设备编号
+    + equipment (int)  设备id
+    + equipment_name (String)  设备名字
+    + equipment_pic (String) 设备图片
+    + location (int)  位置ID
+    + location_name (String) 位置名字
+    + brandid (int) 品牌id
+    + brandname (String)  品牌名字
+    + categoryid (int) 分类id
+    + categoryname (String)  分类名字
+    + model (String)
     + ip (String)  ip
     + port (int)   端口
     + service_time (int) 服务时长
+    + used_no  (int)
+    + failure_no (int)
     + status (int)   1为正常 0为关闭  2为故障
     + ismonitor (int)  是否作为监控设备 1为是  0为不是
     + x_axis (float)  X轴
@@ -1089,19 +1103,29 @@
 
         {
         "id": 1,
-        "equipment_no": 20001,
-        "equipment": 1,
-        "equipment_name": "ss",
-        "location": 2,
-        "location_name": "一层会议室",
-        "ip": "192.168.1.22",
-        "port": 8008,
+        "loucengid": 6,
+        "louchengname": "六层",
+        "equipment_no": 2001,
+        "equipment": 28,
+        "equipment_name": "占用感应器",
+        "equipment_pic": null,
+        "location": 8,
+        "location_name": "男厕坑位1",
+        "brandid": 2,
+        "brandname": "Extron",
+        "categoryid": 11,
+        "categoryname": "传感器",
+        "model": "OCS 100C",
+        "ip": "",
+        "port": null,
         "service_time": 15,
+        "used_no": 0,
+        "failure_no": 0,
         "status": 1,
         "ismonitor": 0,
-        "x_axis": 22,
-        "y_axis": 56,
-        "unique_id": "sn-1",
+        "x_axis": null,
+        "y_axis": null,
+        "unique_id": "",
         "enabled": 1,
         "creator": 0,
         "modifier": 0,
