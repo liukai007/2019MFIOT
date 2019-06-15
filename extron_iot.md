@@ -40,6 +40,15 @@
     + 修改实际设备
     + 查询实际设备
     + 查询实际设备列表
+    
++ 2019年6月15日
+    + 设备异常个数接口  
+    + 受控设备分类统计接口
+    + 会议室，受控，中控设备汇总接口
+    + 空气质量接口
+    + 办公室概况
+    + 设备总览
+
 
 ## 图片上传
 ### 图片上传接口 [POST] /front/upload/image
@@ -1144,6 +1153,7 @@
     + brandids (String) 品牌ids -非必填
     + categoryids (String) 分类ids -非必填
     + localids (String) 位置ids -非必填
+    + status (int)  状态 1为正常 0为关闭  2为故障
 
 + Response 200
 
@@ -1216,3 +1226,255 @@
             }
             ]
             }
+### 设备异常个数接口 [GET] /front/geteqiupmentcount/
++ Data
+    + status (int) 状态id(1为正常 0为关闭 2为故障)
+    + realityequipmentcount  (int) 设备数
++ Description
+
++ Parameters
+    + status (int)  状态 1为正常 0为关闭 2为故障(默认是故障状态)
+
++ Response 200
+
+        {
+        "data": {
+            "status": "0",
+            "realityequipmentcount": 48
+        }
+        }
+    
+### 受控设备分类统计接口 [GET] /front/equipmentstatistics/
++ Data
+    + sumcount (int) 受控设备总数
+    + id  (int) id
+    + category_name (String) 分类名字
+    + count (int) 受控设备数
+    + percent (float) 受控设备占比
++ Description
+
++ Parameters
++ Response 200
+
+            {
+            "data": {
+                "sumcount": 43,
+                "results": [
+                    {
+                    "id": 1,
+                    "category_name": "音频设备",
+                    "count": 19,
+                    "percent": 44.19
+                },
+                {
+                    "id": 2,
+                    "category_name": "视频设备",
+                    "count": 4,
+                    "percent": 9.3
+                },
+                {
+                    "id": 3,
+                    "category_name": "中控设备",
+                    "count": 0,
+                    "percent": 0
+                },
+                {
+                    "id": 4,
+                    "category_name": "其他设备",
+                    "count": 0,
+                    "percent": 0
+                },
+                {
+                    "id": 5,
+                    "category_name": "照明设备",
+                    "count": 5,
+                    "percent": 11.63
+                },
+                {
+                    "id": 8,
+                    "category_name": "温控设备",
+                    "count": 0,
+                    "percent": 0
+                },
+                {
+                    "id": 11,
+                    "category_name": "传感器",
+                    "count": 15,
+                    "percent": 34.88
+                },
+                {
+                    "id": 13,
+                    "category_name": "网络设备",
+                    "count": 0,
+                    "percent": 0
+                }
+        ]
+    }
+}
+
+### 会议室，受控，中控设备汇总接口 [GET] /front/collect/
++ Data
+    + meetingroomsum (int) 会议室数量
+    + iscontrolledequipmentsum (int) 受控设备数量
+    + controlequipmentsum (int) 中控设备数量
+    
++ Description
+
++ Parameters
++ Response 200
+
+        {
+        "data": [
+            {
+                "meetingroomsum": 3,
+                "other": "other"
+            },
+            {
+                "iscontrolledequipmentsum": 43,
+                "other": "other"
+            },
+            {
+                "Controlequipmentsum": 1,
+                "other": "other"
+            }
+        ]
+        }
+
+### 空气质量接口 [GET] /front/environmental/?locationid=5
++ Data
+    + id (int) 会议室数量
+    + temperature (int) 温度
+    + humidity (int) 湿度
+    + tvoc (float) tvoc值
+    + ch20 (float)  ch20值
+    + co2 (float)  co2值
+    + pm10 (float) pm10值
+    + pm25 (float) pm2.5值
+    + methanal  (float) 甲醛值
+    + content (String) 日志内容
+    + creator (int)  创建人
+    + created (Datetime) 日期
+    + location (int)  位置id
+    
++ Description
+
++ Parameters
+    + locationid (int) 必填 填写位置的id   
++ Response 200
+
+        {
+        "id": 3,
+        "temperature": 22,
+        "humidity": 22,
+        "tvoc": 22,
+        "ch20": 22,
+        "co2": 22,
+        "pm10": 22,
+        "pm25": 22,
+        "methanal": 22,
+        "content": null,
+        "creator": 0,
+        "created": "2019-06-15T15:58:25Z",
+        "location": 5
+        }
+        
+### 办公室概况 [GET] /front/meetingsituation/
++ Data
+    + meetingroomsum (int) 会议室总数
+    + id  (int) id
+    + category_name (String) 分类名字
+    + count (int) 受控设备数
+    + percent (float) 受控设备占比
+    
++ Description
++ Parameters
+    +   
++ Response 200
+
+            {
+            "data": {
+            "meetingroomsum": 3,
+            "results": [
+                {
+                    "id": 1,
+                    "category_name": "音频设备",
+                    "count": 19,
+                    "percent": 43.18
+                },
+                {
+                    "id": 2,
+                    "category_name": "视频设备",
+                    "count": 4,
+                    "percent": 9.09
+                },
+                {
+                    "id": 3,
+                    "category_name": "中控设备",
+                    "count": 1,
+                    "percent": 2.27
+                },
+                {
+                    "id": 4,
+                    "category_name": "其他设备",
+                    "count": 0,
+                    "percent": 0
+                },
+                {
+                    "id": 5,
+                    "category_name": "照明设备",
+                    "count": 5,
+                    "percent": 11.36
+                },
+                {
+                    "id": 8,
+                    "category_name": "温控设备",
+                    "count": 0,
+                    "percent": 0
+                },
+                {
+                    "id": 11,
+                    "category_name": "传感器",
+                    "count": 15,
+                    "percent": 34.09
+                },
+                {
+                    "id": 13,
+                    "category_name": "网络设备",
+                    "count": 0,
+                    "percent": 0
+                }
+            ]
+        }
+        }
+### 设备总览
++ Data
+    + equipmentsum (int) 设备总数
+    + workingequipmentsum  (int) 正在工作设备数
+    + faultequipmentsum (int) 故障设备数
++ Description
++ Parameters
+    + locationid (int) 位置id 必填
++ Response 200
+
+        {
+        "data": [
+            {
+                "equipmentsum": 28
+            },
+            {
+                "workingequipmentsum": 2
+            },
+            {
+                "faultequipmentsum": 0
+            }
+            ]
+            }
+        
++ Response 400
+
+        {
+        "data": {
+            "msg": "not data",
+            "code": 400
+        }
+        }
