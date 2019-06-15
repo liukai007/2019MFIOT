@@ -686,10 +686,6 @@
         ]
         }
 
-
-
-
-
 ## 位置管理
 + Data
     + id (int) id
@@ -928,7 +924,7 @@
 ### 根据楼层得到会议室 [GET] /front/getfloor/?isconference=1
 
 + Parameters
-    + parentid (int)  楼层id  -必填
+    + parentid (int)  楼层id  -非必填
     + isconference (int)  是否会议室1为会议室 0为非会议室
 
 + Response 200
