@@ -1351,6 +1351,7 @@
     + creator (int)  创建人
     + created (Datetime) 日期
     + location (int)  位置id
+    + airLevel (int) 空气质量级别（1为优秀，2为良好，3为轻度污染，4为中度污染，5为重度污染）
     
 + Description
 
@@ -1360,6 +1361,7 @@
 
         {
         "id": 3,
+        "airLevel": 1,
         "temperature": 22,
         "humidity": 22,
         "tvoc": 22,
