@@ -54,10 +54,10 @@
 ### 图片上传接口 [POST] /front/upload/image
 
 + Description
-    上次图片的那个字段名字叫img
+    + 上次图片的那个字段名字叫img
 
 + Request (application/json)
-        上传文件即可
+    + 上传文件即可
         
 + Response 200
 
