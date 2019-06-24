@@ -49,6 +49,9 @@
     + 办公室概况
     + 设备总览
 
++ 2019年6月24日
+    + 会议室中控主机接口
+
 
 ## 图片上传
 ### 图片上传接口 [POST] /front/upload/image
@@ -982,6 +985,7 @@
     + modifier (long) - 修改人
     + created (date) - 创建时间
     + modified (date) - 修改时间
+    + week_used_no(int)  周运行次数
     
     
 ### 新增设备详情  [POST] /front/api/equipmentdetails/
@@ -1137,6 +1141,42 @@
         "created": "2019-06-10T19:55:32+08:00",
         "modified": "2019-06-10T19:55:35+08:00"
         }
+
+### 会议室中控主机接口
++ Description
+
++ Parameters
+    + locationid (int) 位置id 必填
++ Response 200
+
+        {
+        "data": [
+        {
+            "equipmentsum": {
+                "id": 54,
+                "equipment": 24,
+                "equipment_name": "Extron IPCP Pro 350 主机",
+                "equipment_pic": "https://static.mifanxing.com/wx/image/19/20/1315826.jpg",
+                "location": 5,
+                "location_name": "中会议室",
+                "service_time": 0,
+                "used_no": 25,
+                "week_used_no": 7,
+                "failure_no": 0
+            }
+        }
+        ]
+        }
+        
++ Response 400
+
+        {
+        "data": {
+            "msg": "not data",
+            "code": 400
+        }
+        }
+
     
 ### 查询实际设备列表 [GET] /front/page/realityequipment/
 例如：http://127.0.0.1:8000/front/page/realityequipment/?brandids=1,2&categoryids=&page=1&size=2
@@ -1476,3 +1516,4 @@
             "code": 400
         }
         }
+
