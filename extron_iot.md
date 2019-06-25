@@ -1524,7 +1524,8 @@
         }
         }
 
-### 坑位占用接口
+### 坑位占用接口 [GET] /front/pitoccupy/?locationids=
+http://127.0.0.1:8000/front/pitoccupy/?locationids=9,10,11
 + Data
     + id (int) ID
     + location  (int) 位置ID
@@ -1532,18 +1533,32 @@
     + occupy (int) 0为未占用，1为占用
 + Description
 + Parameters
-    + locationid (int) 位置id 必填
+    + locationids (String) 位置id 必填
 + Response 200
 
         {
         "data": [
             {
-                "logPit": {
-                    "id": 11,
-                    "location": 9,
-                    "location_name": "男厕坑位2",
-                    "occupy": 0
-                }
+                "logPit": [
+                    {
+                        "id": 11,
+                        "location": 9,
+                        "location_name": "男厕坑位2",
+                        "occupy": 0
+                    },
+                    {
+                        "id": 12,
+                        "location": 10,
+                        "location_name": "男厕坑位3",
+                        "occupy": 0
+                    },
+                    {
+                        "id": 13,
+                        "location": 11,
+                        "location_name": "女厕坑位1",
+                        "occupy": 0
+                    }
+                ]
             }
             ]
             }
@@ -1559,7 +1574,7 @@
         
        {
         "data": {
-            "msg": "locationid is null",
+            "msg": "locationids is null",
             "code": 400
         }
         }
