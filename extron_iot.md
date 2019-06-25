@@ -51,6 +51,7 @@
 
 + 2019年6月24日
     + 会议室中控主机接口
+    + 坑位占用接口
 
 
 ## 图片上传
@@ -1517,3 +1518,42 @@
         }
         }
 
+### 坑位占用接口
++ Data
+    + id (int) ID
+    + location  (int) 位置ID
+    + location_name (String) 位置名称
+    + occupy (int) 0为未占用，1为占用
++ Description
++ Parameters
+    + locationid (int) 位置id 必填
++ Response 200
+
+        {
+        "data": [
+            {
+                "logPit": {
+                    "id": 11,
+                    "location": 9,
+                    "location_name": "男厕坑位2",
+                    "occupy": 0
+                }
+            }
+            ]
+            }
+        
++ Response 400
+
+        {
+        "data": {
+            "msg": "not data",
+            "code": 400
+        }
+        }
+        
+       {
+        "data": {
+            "msg": "locationid is null",
+            "code": 400
+        }
+        }
