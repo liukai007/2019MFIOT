@@ -1142,7 +1142,7 @@
         "modified": "2019-06-10T19:55:35+08:00"
         }
 
-### 会议室中控主机接口
+### 会议室中控主机接口 [GET] /front/controlhostinfo/
 + Description
 
 + Parameters
