@@ -57,7 +57,7 @@
 ### 图片上传接口 [POST] /front/upload/image
 
 + Description
-    + 上次图片的那个字段名字叫img
+    + 上传图片的字段名字叫img
 
 + Request (application/json)
     + 上传文件即可
@@ -417,7 +417,7 @@
     + equipment_category_name (String) 设备分类名字
     + equipment_category_pic (String) 设备分类图片
     + model  (String) 设备型号
-    + quipmente_amount (int)  实际设备其引用次数
+    + equipment_amount (int)  实际设备其引用次数
     + description (String) 描述
     + iscontrolled (int) 是否是受控设备 1为受控设备  0为非受控设备
     + lifetime (int) 寿命时长（单位分钟）
@@ -655,7 +655,7 @@
             "equipment_category_name": "音频系统",
             "equipment_category_pic": "www图",
             "model": "MEG 14-40-L-II ",
-            "quipmente_amount": 1,
+            "equipment_amount": 1,
             "description": "extron001",
             "iscontrolled": 1,
             "lifetime": 0,
@@ -676,7 +676,7 @@
             "equipment_category_name": "音频系统",
             "equipment_category_pic": "www图",
             "model": "SL HANDHELD SET DW",
-            "quipmente_amount": 1,
+            "equipment_amount": 1,
             "description": "111",
             "iscontrolled": 1,
             "lifetime": 0,
@@ -988,7 +988,7 @@
     + week_used_no(int)  周运行次数
     
     
-### 新增设备详情  [POST] /front/api/equipmentdetails/
+### 新增设备详情  [POST] /front/api/realityequipment/
 
 + Description
 
@@ -1044,7 +1044,7 @@
         "detail": "Not found."
         }
         
-### 删除设备详情 [DEL] /front/api/realityequipment/{id}/
+### 删除实际设备 [DEL] /front/api/realityequipment/{id}/
 
 + Description
 
