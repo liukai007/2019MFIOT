@@ -188,7 +188,7 @@
 
 + Parameters
     + page (int)  页码  -非必填 默认为1
-    + + size (int)   页尺 -非必填 默认1000
+    + size (int)   页尺 -非必填 默认1000
     + brandname (String) 品牌名字 -模糊查询 -非必填
     
 
@@ -198,6 +198,7 @@
         "totalElements": 13,
         "totalPages": 2,
         "size": 10,
+        "number":1
         "first": "http://127.0.0.1:8000/front/page/brand/?page=1",
         "last": "http://127.0.0.1:8000/front/page/brand/?page=2",
         "next": "http://127.0.0.1:8000/front/page/brand/?page=2",
@@ -374,6 +375,7 @@
         "totalElements": 2,
         "totalPages": 1,
         "size": 10,
+        "number":1
         "first": "http://127.0.0.1:8000/front/page/equipmentcategory/?page=1",
         "last": "http://127.0.0.1:8000/front/page/equipmentcategory/?page=1",
         "next": null,
@@ -578,6 +580,7 @@
         "totalElements": 42,
         "totalPages": 21,
         "size": 2,
+        "number":1
         "first": "http://127.0.0.1:8000/front/page/equipmentdetails/?page=1&size=2",
         "last": "http://127.0.0.1:8000/front/page/equipmentdetails/?page=21&size=2",
         "next": "http://127.0.0.1:8000/front/page/equipmentdetails/?page=2&size=2",
@@ -640,6 +643,7 @@
         "totalElements": 42,
         "totalPages": 21,
         "size": 2,
+        "number":1
         "first": "http://127.0.0.1:8000/front/page/equipmentdetails/?page=1&size=2",
         "last": "http://127.0.0.1:8000/front/page/equipmentdetails/?page=21&size=2",
         "next": "http://127.0.0.1:8000/front/page/equipmentdetails/?page=2&size=2",
@@ -864,6 +868,7 @@
         "totalElements": 12,
         "totalPages": 2,
         "size": 10,
+        "number":2
         "first": "http://127.0.0.1:8000/front/page/location/?page=1",
         "last": "http://127.0.0.1:8000/front/page/location/?page=2",
         "next": null,
@@ -1198,6 +1203,7 @@
         "totalElements": 15,
         "totalPages": 8,
         "size": 2,
+        "number":1
         "first": "http://127.0.0.1:8000/front/page/realityequipment/?brandids=1%2C2&categoryids=&localids=5&page=1&size=2",
         "last": "http://127.0.0.1:8000/front/page/realityequipment/?brandids=1%2C2&categoryids=&localids=5&page=8&size=2",
         "next": "http://127.0.0.1:8000/front/page/realityequipment/?brandids=1%2C2&categoryids=&localids=5&page=2&size=2",
