@@ -1196,6 +1196,7 @@
     + categoryids (String) 分类ids -非必填
     + locationids (String) 位置ids -非必填（默认是会议室的所有的id,如果其他的请自己加位置id 格式：1,2,3）
     + status (int)  状态 1为正常 0为关闭  2为故障
+    + isconference (int) 是否会议室，默认为null即可，当有值的时候即为选择会议室。
 
 + Response 200
 
