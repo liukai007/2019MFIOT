@@ -52,6 +52,7 @@
 + 2019年6月24日
     + 会议室中控主机接口
     + 坑位占用接口
+    + 会议室使用状态
 
 
 ## 图片上传
@@ -1574,6 +1575,43 @@ http://127.0.0.1:8000/front/pitoccupy/?locationids=9,10,11
         }
         
        {
+        "data": {
+            "msg": "locationids is null",
+            "code": 400
+        }
+        }
+        
+### 会议室使用状态 [GET] /front/meetingcondition/?locationid=
++ Data
+    + usedsum (int) 使用次数
+    + failuresum  (int) 故障次数
+    + upordown (int) 上升还是下降 1为上升 0为下降
+    + ratio (float) 相对比例
++ Description
++ Parameters
+    + locationid (String) 位置id 必填
++ Response 200
+
+        {
+        "data": [
+            {
+                "usedsum": 14
+            },
+            {
+                "failuresum": 1
+            },
+            {
+                "upordown": 1
+            },
+            {
+                "ratio": 20
+            }
+        ]
+        }
+        
++ Response 400
+
+        {
         "data": {
             "msg": "locationids is null",
             "code": 400
