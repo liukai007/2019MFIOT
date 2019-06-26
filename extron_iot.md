@@ -705,9 +705,9 @@
     + leaf (int)  是否叶子节点 1为叶子节点  0为非叶子节点
     + x_axis (float) X坐标
     + y_axis (float) Y坐标
-    + status (int) 1正常  0不正常（装修等原因停止使用）
+    + status (int) 1使用中  0未使用
     + isconference (int)  1为是会议室  0为非会议室
-    + enabled (int)  - 使能  0禁止 1启用
+    + enabled (int)  - 使能  1启用 0禁止（装修等原因停止使用） 
     + creator (long) - 创建人
     + modifier (long) - 修改人
     + created (date) - 创建时间
@@ -1194,7 +1194,7 @@
     + ismonitor  (int) 1为监控设备 0为非监控设备
     + brandids (String) 品牌ids -非必填
     + categoryids (String) 分类ids -非必填
-    + localids (String) 位置ids -非必填
+    + locationids (String) 位置ids -非必填（默认是会议室的所有的id,如果其他的请自己加位置id 格式：1,2,3）
     + status (int)  状态 1为正常 0为关闭  2为故障
 
 + Response 200
@@ -1491,7 +1491,7 @@
             ]
         }
         }
-### 设备总览
+### 设备总览 [GET] /front/equipmentsituation/?locationid=
 + Data
     + equipmentsum (int) 设备总数
     + workingequipmentsum  (int) 正在工作设备数
