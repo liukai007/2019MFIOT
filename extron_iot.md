@@ -1593,21 +1593,13 @@ http://127.0.0.1:8000/front/pitoccupy/?locationids=9,10,11
 + Response 200
 
         {
-        "data": [
-            {
-                "usedsum": 14
-            },
-            {
-                "failuresum": 1
-            },
-            {
-                "upordown": 1
-            },
-            {
-                "ratio": 20
+        "data": {
+            "usedsum": 14,
+            "failuresum": 1,
+            "upordown": 1,
+            "ratio": 20
             }
-        ]
-        }
+            }
         
 + Response 400
 
