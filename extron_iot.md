@@ -1360,7 +1360,12 @@
 ### 会议室，受控，中控设备汇总接口 [GET] /front/collect/
 + Data
     + meetingroomsum (int) 会议室数量
+    + meetingupordown  (int)  上升还是下降 1为上升 0为下降
+    + meetingratio (float)  会议室环比
+    + meetinghighest (string) 使用率最高的会议室
     + iscontrolledequipmentsum (int) 受控设备数量
+    + iscontrolledequipmentupordown (int) 上升还是下降 1为上升 0为下降
+    + iscontrolledequipmentratio (float) 受控设备使用率环比
     + controlequipmentsum (int) 中控设备数量
     
 + Description
@@ -1369,20 +1374,16 @@
 + Response 200
 
         {
-        "data": [
-            {
-                "meetingroomsum": 3,
-                "other": "other"
-            },
-            {
-                "iscontrolledequipmentsum": 43,
-                "other": "other"
-            },
-            {
-                "Controlequipmentsum": 1,
-                "other": "other"
-            }
-        ]
+        "data": {
+            "meetingroomsum": 3,
+            "meetingupordown": 1,
+            "meetingratio": 10,
+            "meetinghighest": "中会议室",
+            "iscontrolledequipmentsum": 66,
+            "iscontrolledequipmentupordown": 1,
+            "iscontrolledequipmentratio": 5.4,
+            "controlequipmentsum": 2
+        }
         }
 
 ### 空气质量接口 [GET] /front/environmental/?locationid=5
