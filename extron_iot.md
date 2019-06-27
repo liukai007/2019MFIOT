@@ -1504,18 +1504,13 @@
 + Response 200
 
         {
-        "data": [
-            {
-                "equipmentsum": 28
-            },
-            {
-                "workingequipmentsum": 2
-            },
-            {
-                "faultequipmentsum": 0
-            }
-            ]
-            }
+        "data": {
+            "equipmentsum": 41,
+            "workingequipmentsum": 16,
+            "faultequipmentsum": 0,
+            "equipmentusedrate": 20
+        }
+        }
         
 + Response 400
 
