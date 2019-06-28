@@ -1375,14 +1375,17 @@
 
         {
         "data": {
+            "meetinglastweekratio": 100,
             "meetingroomsum": 3,
             "meetingupordown": 1,
             "meetingratio": 10,
             "meetinghighest": "中会议室",
+            "iscontrolledequipmentlastweekratio": 100,
             "iscontrolledequipmentsum": 66,
             "iscontrolledequipmentupordown": 1,
             "iscontrolledequipmentratio": 5.4,
-            "controlequipmentsum": 2
+            "controlequipmentsum": 2,
+            "timelong": 52
         }
         }
 
