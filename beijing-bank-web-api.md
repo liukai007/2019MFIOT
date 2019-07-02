@@ -9,7 +9,7 @@
 
 ### 中控设备占比图接口 [GET] /equipmentlist/equip_category/4
 + Data
-    +totalCount (int) 设备数量
+    + totalCount (int) 中控设备总数量
     + id (int)  ID
     + enabled (int) 使能 1启用 0禁用
     + creator  (int) 创建人id
