@@ -5,6 +5,9 @@
 + 2019年7月2日
     + 受控设备分类统计图
     + 受控设备分类统计表
+    + 会议室统计接口
+    + 设备统计接口
+    + 中控设备统计接口
     
 
 ### 中控设备占比图接口 [GET] /equipmentlist/equip_category/4
@@ -236,8 +239,68 @@
             ]
             }
             
-            
-            
+### 会议室统计接口 [GET] /locations/usedstatus
++ Data
+    + weekUsageRate (float) 周使用率
+    + linkRelativeRatio (float) 环比
+    + inkRelativeRatioUpDown (Int) 1为上升，0为下降
+    + weekUsageHighest (String) 上周使用率最高的会议室
+    + totalCount (Long)  会议室总间数
+
++ Description
++ Response 200  
+
+        {
+        "data": {
+            "weekUsageRate": 13,
+            "linkRelativeRatio": 12,
+            "linkRelativeRatioUpDown": 1,
+            "weekUsageHighest": "六层会议室",
+            "totalCount": 7
+        }
+        }
+
+### 设备统计接口 [GET] /specificequip/usedstatus
++ Data
+    + weekUsageRate (float) 周使用率
+    + linkRelativeRatio (float) 环比
+    + inkRelativeRatioUpDown (Int) 1为上升，0为下降
+    + weekUsageHighest (String) 上周使用率最高的设备
+    + totalCount (Long)  设备总数
+
++ Description
++ Response 200  
+
+        {
+        "data": {
+            "weekUsageRate": 14.4,
+            "linkRelativeRatio": 11,
+            "linkRelativeRatioUpDown": 1,
+            "weekUsageHighest": "投影机",
+            "totalCount": 21
+        }
+        }
+        
+### 中控设备统计接口 [GET] /specificequip/usedstatus/centercontrol
++ Data
+    + weekUsageRate (float) 周使用率
+    + linkRelativeRatio (float) 环比
+    + inkRelativeRatioUpDown (Int) 1为上升，0为下降
+    + weekUsageHighest (String) 上周使用率最高的中控设备
+    + totalCount (Long)  会议室总间数
+
++ Description
++ Response 200  
+
+        {
+        "data": {
+            "weekUsageRate": 14.8,
+            "linkRelativeRatio": 11,
+            "linkRelativeRatioUpDown": 1,
+            "weekUsageHighest": null,
+            "totalCount": 2
+        }
+        }
             
             
             
