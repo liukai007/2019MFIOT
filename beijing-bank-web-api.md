@@ -8,6 +8,13 @@
     + 会议室统计接口
     + 设备统计接口
     + 中控设备统计接口
+
++ 2019年7月3日
+    + 列出品牌接口
+    + 列出设备分类接口
+    + 列出楼层接口
+    + 通过楼层得到会议室接口
+    + 设备状态接口
     
 
 ### 中控设备占比图接口 [GET] /equipmentlist/equip_category/4
@@ -302,9 +309,194 @@
         }
         }
             
+### 列出品牌接口 [GET]  /brand/info
++ Data
+    + id (int) ID
+    + brandName (String) 品牌名称
+    + brandLogo (String) 品牌logo
+
++ Description
++ Response 200  
+
+        {
+        "data": [
+            {
+                "id": 1,
+                "brandName": "Leviton",
+                "brandLogo": "https://static.mifanxing.com/yyren/image/113/28/1864145.jpg?w=200&h=90"
+            },
+            {
+                "id": 2,
+                "brandName": "SAMSUNG",
+                "brandLogo": "https://static.mifanxing.com/yyren/image/113/28/1864145.jpg?w=200&h=90"
+            },
+            {
+                "id": 3,
+                "brandName": "EXTRON",
+                "brandLogo": "https://static.mifanxing.com/yyren/image/113/28/1864145.jpg?w=200&h=90"
+            },
+            {
+                "id": 4,
+                "brandName": "BENQ",
+                "brandLogo": "https://static.mifanxing.com/yyren/image/113/28/1864145.jpg?w=200&h=90"
+            },
+            {
+                "id": 5,
+                "brandName": "NEC",
+                "brandLogo": "https://static.mifanxing.com/yyren/image/113/28/1864145.jpg?w=200&h=90"
+            },
+            {
+                "id": 6,
+                "brandName": "MAXHUB",
+                "brandLogo": "https://static.mifanxing.com/yyren/image/113/28/1864145.jpg?w=200&h=90"
+            },
+            {
+                "id": 7,
+                "brandName": "GORSEE",
+                "brandLogo": "https://static.mifanxing.com/yyren/image/113/28/1864145.jpg?w=200&h=90"
+            },
+            {
+                "id": 8,
+                "brandName": "AMX",
+                "brandLogo": "https://static.mifanxing.com/yyren/image/113/28/1864145.jpg?w=200&h=90"
+            },
+            {
+                "id": 9,
+                "brandName": "AMX1",
+                "brandLogo": "https://static.mifanxing.com/yyren/image/113/28/1864145.jpg?w=200&h=90"
+            }
+        ]
+        }
             
-            
-            
+### 列出设备分类接口 [GET]  /equipmentcategory/info
+
++ Data
+    + id (int) id
+    + name (String) 分类名字
+    + description (Int) 描述
+    + picture (String) 分类的图片
+
++ Description
++ Response 200  
+
+        {
+        "data": [
+            {
+                "id": 1,
+                "name": "灯控制器",
+                "description": "灯控制器",
+                "picture": "https://static.mifanxing.com/wx/image/95/20/1335046.jpg"
+            },
+            {
+                "id": 2,
+                "name": "投影机",
+                "description": "投影机",
+                "picture": "https://static.mifanxing.com/wx/image/95/20/1335046.jpg"
+            },
+            {
+                "id": 3,
+                "name": "矩阵切换器",
+                "description": "矩阵切换器",
+                "picture": "https://static.mifanxing.com/wx/image/95/20/1335046.jpg"
+            },
+            {
+                "id": 4,
+                "name": "中控",
+                "description": "中控",
+                "picture": "https://static.mifanxing.com/wx/image/95/20/1335046.jpg"
+            },
+            {
+                "id": 5,
+                "name": "数字音频处理器",
+                "description": "数字音频处理器",
+                "picture": "https://static.mifanxing.com/wx/image/95/20/1335046.jpg"
+            },
+            {
+                "id": 6,
+                "name": "显示器",
+                "description": "显示器",
+                "picture": "https://static.mifanxing.com/wx/image/95/20/1335046.jpg"
+            },
+            {
+                "id": 7,
+                "name": "平板",
+                "description": "会议平板",
+                "picture": "https://static.mifanxing.com/wx/image/95/20/1335046.jpg"
+            },
+            {
+                "id": 8,
+                "name": "投影幕",
+                "description": "投影幕",
+                "picture": "https://static.mifanxing.com/wx/image/95/20/1335046.jpg"
+            }
+        ]
+        }
+
+### 列出楼层接口 [GET]  /locations/floor
+
++ Data
+    + id (int) ID
+    + name (String) 楼层名字
+    + description (String) 楼层描述
+    + picture  (String) 楼层图片
+
++ Description
++ Response 200  
+
+        {
+        "data": [
+            {
+                "id": 17,
+                "name": "楼五层",
+                "description": "1"
+            },
+            {
+                "id": 18,
+                "name": "楼六层",
+                "description": "1"
+            },
+            {
+                "id": 19,
+                "name": "楼七层",
+                "description": "2"
+            },
+            {
+                "id": 20,
+                "name": "楼八层",
+                "description": "2"
+            },
+            {
+                "id": 21,
+                "name": "11层00",
+                "description": "describedescribedescribedescribedescribedescribedescribe",
+                "picture": "http://www.picture"
+            }
+        ]
+        }
+
+### 通过楼层得到会议室接口 [GET] /locations/meetingroombyfloor/{floor_id}     
+
++ Data
+    + id (int)
+    + name (String) 会议室名称
+    + description  (String)  描述
+    + picture (String) 图片
+
++ Description
++ Parameters
+    + floor_id (int)  楼层ID  -必填 
++ Response 200  
+
+        {
+        "data": [
+            {
+                "id": 5,
+                "name": "六层会议室",
+                "description": "六层会议室",
+                "picture": "http://www.bankofbeijing.com.cn/images/logo.gif"
+            }
+        ]
+        }
             
             
             
