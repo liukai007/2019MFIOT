@@ -17,6 +17,11 @@
     + 设备状态接口
     
 
++ 2019年7月8日
+    + 
+    + 
+    
+
 ### 中控设备占比图接口 [GET] /equipmentlist/equip_category/4
 + Data
     + totalCount (int) 中控设备总数量
@@ -497,7 +502,101 @@
             }
         ]
         }
-            
-            
-            
-            
+
+### 设备状态接口 [GET]  /specificequip?filter[brandIds]=1,2&filter[equipmentCategoryIds]=1,2,3,6&page[number]=1&page[size]=5
+
++ Data
+    + id (int) ID
+    + enabled (int)  1使能  0禁用
+    + creator (int) 创建人ID
+    + modifier (int) 修改人ID
+    + modified  (datetime) 修改时间
+    + equipmentNo (int) 自定义编码
+    + name (String) 设备名字
+    + locationId (int) 位置ID
+    + equipmentId (int)  设备ID
+    + usedTime (int)  已经使用时长
+    + presentStatueId (int) 设备状态 0关闭，1正常 ，2故障
+    + picture  (String) 设备图片
+    + useNumber (int) 使用次数
+    + failureNumber (int) 故障次数
+    + whetherMonitor (int) 是否被监控1监控 0非监控
+    + meetingRoom  (String)  会议室名字
+    + categoryName  (String) 分类名字
+    + floorName (String) 楼层名字
+    + model  (String)  型号
+    + brandName  (String)  品牌名字
+    
++ Description
++ Parameters
+    + page[number] (int)  页码 -非必填 默认为1
+    + page[size] (int)  页尺 -非必填 默认为10
+    + filter[locationId] (String) 位置id
+    + filter[brandIds] (String) 品牌id,使用逗号隔开
+    + filter[equipmentCategoryIds] (String) 分类id，使用逗号隔开
++ Response 200  
+
+        {
+        "meta": {
+            "totalPages": 2,
+            "totalElements": 4,
+            "size": 2,
+            "number": 1,
+            "numberOfElements": 2,
+            "first": true,
+            "last": false,
+            "sort": null
+        },
+        "links": {
+            "self": "/specificequip?filter[brandIds]=1,2&filter[equipmentCategoryIds]=1,2,3,6&page[number]=1&page[size]=2",
+            "first": "/specificequip?filter[brandIds]=1,2&filter[equipmentCategoryIds]=1,2,3,6&page[number]=1&page[size]=2",
+            "next": "/specificequip?filter[brandIds]=1,2&filter[equipmentCategoryIds]=1,2,3,6&page[number]=2&page[size]=2",
+            "last": "/specificequip?filter[brandIds]=1,2&filter[equipmentCategoryIds]=1,2,3,6&page[number]=2&page[size]=2"
+        },
+        "data": [
+            {
+                "id": 1,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "modified": "2019-04-16 13:31:37",
+                "equipmentNo": 1001,
+                "name": "灯控网络接口",
+                "locationId": 3,
+                "equipmentId": 1,
+                "usedTime": 5,
+                "presentStatueId": 1,
+                "picture": "https://static.mifanxing.com/yyren/image/149/53/3511737.jpg?w=200",
+                "useNumber": 1,
+                "failureNumber": 1,
+                "whetherMonitor": 0,
+                "meetingRoom": "一层大报告厅",
+                "categoryName": "灯控制器",
+                "floorName": "11层00",
+                "model": "LNUSB-00B",
+                "brandName": "Leviton"
+            },
+            {
+                "id": 2,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "modified": "2019-04-16 13:34:00",
+                "equipmentNo": 1002,
+                "name": "主席台返看显示器",
+                "locationId": 3,
+                "equipmentId": 2,
+                "usedTime": 4,
+                "presentStatueId": 1,
+                "picture": "https://static.mifanxing.com/yyren/image/149/53/3511737.jpg?w=200",
+                "useNumber": 1,
+                "failureNumber": 1,
+                "whetherMonitor": 0,
+                "meetingRoom": "一层大报告厅",
+                "categoryName": "显示器",
+                "floorName": "11层00",
+                "model": "QM65H",
+                "brandName": "SAMSUNG"
+            }
+        ]
+        }
