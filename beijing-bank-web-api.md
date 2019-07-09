@@ -755,7 +755,7 @@
         ]
     }
  
-### 会议室详情接口
+### 会议室详情接口 [GET]  /locations/{id}
 
 + Data
     + id (int) ID
@@ -776,7 +776,7 @@
 
 + Description
 + Parameters
-    + floor_id (int)  楼层ID  -必填 
+    + id (int) 位置ID  -必填 
 + Response 200  
 
         {
