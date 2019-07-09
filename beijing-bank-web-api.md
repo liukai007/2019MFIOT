@@ -18,8 +18,8 @@
     
 
 + 2019年7月8日
-    + 
-    + 
+    + 会议室列表
+    + 会议室详情接口
     
 
 ### 中控设备占比图接口 [GET] /equipmentlist/equip_category/4
@@ -599,4 +599,202 @@
                 "brandName": "SAMSUNG"
             }
         ]
+        }
+         
+### 会议室列表 [GET] /locations/meetingRoom
+
++ Data
+    + id (int) ID
+    + enabled (int)  1使能  0禁用
+    + creator (int) 创建人ID
+    + modifier (int) 修改人ID
+    + modified  (datetime) 修改时间
+    + parentId  (int) 父id
+    + name (string)  位置名字
+    + locationNo (int)  自定义id
+    + description (string) 描述
+    + picture (string) 图片链接
+    + systemDiagram (string) 系统图链接
+    + leaf (int) 是否叶子节点 1为叶子节点 0为非叶子节点
+    + floor (int) 是否楼层 1为楼层 0为非楼层
+    + status (int) 状态 0未使用状态 1为使用 2为故障
+    
++ Description
++ Parameters
+    + page[number] (int)  页码 -非必填 默认为1
+    + page[size] (int)  页尺 -非必填 默认为10
++ Response 200  
+
+        {
+        "meta": {
+            "totalPages": 1,
+            "totalElements": 7,
+            "size": 10,
+            "number": 1,
+            "numberOfElements": 7,
+            "first": true,
+            "last": true,
+            "sort": null
+        },
+        "links": {
+            "self": "/locations/meetingRoom?page[number]=1&page[size]=10",
+            "first": "/locations/meetingRoom?page[number]=1&page[size]=10",
+            "last": "/locations/meetingRoom?page[number]=1&page[size]=10"
+        },
+        "data": [
+            {
+                "id": 3,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "modified": "2019-04-15 16:02:25",
+                "parentId": 21,
+                "name": "一层大报告厅",
+                "locationNo": 1001,
+                "description": "一层会议室",
+                "picture": "http://www.bankofbeijing.com.cn/images/logo.gif",
+                "systemDiagram": "http://www.bankofbeijing.com.cn/images/logo.gif",
+                "leaf": 1,
+                "floor": 0,
+                "status": 0
+            },
+            {
+                "id": 4,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "modified": "2019-04-15 16:02:11",
+                "parentId": 20,
+                "name": "八层大会议室",
+                "locationNo": 1005,
+                "description": "八层大会议室",
+                "picture": "http://www.bankofbeijing.com.cn/images/logo.gif",
+                "systemDiagram": "http://www.bankofbeijing.com.cn/images/logo.gif",
+                "leaf": 1,
+                "floor": 0,
+                "status": 0
+            },
+            {
+                "id": 5,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "modified": "2019-04-15 16:05:53",
+                "parentId": 18,
+                "name": "六层会议室",
+                "locationNo": 1003,
+                "description": "六层会议室",
+                "picture": "http://www.bankofbeijing.com.cn/images/logo.gif",
+                "systemDiagram": "http://www.bankofbeijing.com.cn/images/logo.gif",
+                "leaf": 1,
+                "floor": 0,
+                "status": 0
+            },
+            {
+                "id": 6,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "parentId": 17,
+                "name": "五层会议室",
+                "locationNo": 1002,
+                "description": "五层会议室",
+                "picture": "http://www.bankofbeijing.com.cn/images/logo.gif",
+                "systemDiagram": "http://www.bankofbeijing.com.cn/images/logo.gif",
+                "leaf": 1,
+                "floor": 0,
+                "status": 0
+            },
+            {
+                "id": 7,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "parentId": 19,
+                "name": "七层会议室",
+                "locationNo": 1004,
+                "description": "七层会议室",
+                "picture": "http://www.bankofbeijing.com.cn/images/logo.gif",
+                "systemDiagram": "http://www.bankofbeijing.com.cn/images/logo.gif",
+                "leaf": 1,
+                "floor": 0,
+                "status": 0
+            },
+            {
+                "id": 8,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "parentId": 20,
+                "name": "八层会议室",
+                "locationNo": 1006,
+                "description": "八层会议室",
+                "picture": "http://www.bankofbeijing.com.cn/images/logo.gif",
+                "systemDiagram": "http://www.bankofbeijing.com.cn/images/logo.gif",
+                "leaf": 1,
+                "floor": 0,
+                "status": 0
+            },
+            {
+                "id": 26,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2019-04-19 13:49:03",
+                "modified": "2019-04-19 14:03:13",
+                "parentId": 21,
+                "name": "11层大会议室",
+                "locationNo": 0,
+                "description": "describedescribedescribedescribedescribedescribedescribe",
+                "picture": "http://www.picture",
+                "systemDiagram": "http://www.bankofbeijing.com.cn/images/logo.gif",
+                "leaf": 1,
+                "floor": 0,
+                "status": 0
+            }
+        ]
+    }
+ 
+### 会议室详情接口
+
++ Data
+    + id (int) ID
+    + enabled (int)  1使能  0禁用
+    + creator (int) 创建人ID
+    + modifier (int) 修改人ID
+    + modified  (datetime) 修改时间
+    + parentId  (int) 父id
+    + name (string)  位置名字
+    + locationNo (int)  自定义id
+    + description (string) 描述
+    + picture (string) 图片链接
+    + systemDiagram (string) 系统图链接
+    + leaf (int) 是否叶子节点 1为叶子节点 0为非叶子节点
+    + floor (int) 是否楼层 1为楼层 0为非楼层
+    + status (int) 状态 0未使用状态 1为使用 2为故障
+    + weekUseNumber  (int) 周使用次数
+
++ Description
++ Parameters
+    + floor_id (int)  楼层ID  -必填 
++ Response 200  
+
+        {
+        "data": {
+            "id": 3,
+            "enabled": 1,
+            "creator": 0,
+            "modifier": 0,
+            "modified": "2019-04-15 16:02:25",
+            "parentId": 21,
+            "name": "一层大报告厅",
+            "locationNo": 1001,
+            "description": "一层会议室",
+            "picture": "http://www.bankofbeijing.com.cn/images/logo.gif",
+            "systemDiagram": "http://www.bankofbeijing.com.cn/images/logo.gif",
+            "leaf": 1,
+            "floor": 0,
+            "status": 0,
+            "weekUseNumber": 1
+        }
         }
