@@ -20,6 +20,9 @@
 + 2019年7月8日
     + 会议室列表
     + 会议室详情接口
+
++ 2019年7月9日
+    + 会议室最近一年使用情况接口
     
 
 ### 中控设备占比图接口 [GET] /equipmentlist/equip_category/4
@@ -796,5 +799,32 @@
             "floor": 0,
             "status": 0,
             "weekUseNumber": 1
+        }
+        }
+        
+### 会议室最近一年使用情况接口 [GET] /locations/recentYear/{location_id}
+
++ Data
+    + Map<String,int> 年-月：次数
+
++ Description
++ Parameters
+    + location_id (int)  会议室ID  -必填 
++ Response 200  
+
+        {
+        "data": {
+            "2019-06": 3,
+            "2019-05": 3,
+            "2019-07": 4,
+            "2019-02": 0,
+            "2018-11": 0,
+            "2019-01": 0,
+            "2018-12": 0,
+            "2019-04": 0,
+            "2019-03": 0,
+            "2018-10": 0,
+            "2018-08": 0,
+            "2018-09": 0
         }
         }
