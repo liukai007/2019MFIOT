@@ -902,7 +902,7 @@
     + brandName  (String)  品牌名字  
     + brandLogo  (String) 品牌logo
     + averWeekRunNumber (float) 周平均运行次数
-    + weekRunNumber (Map) 周每日运行次数
+    + weekRunNumber (Map<周几，次数>) 周每日运行次数
 
 + Description
 + Parameters
