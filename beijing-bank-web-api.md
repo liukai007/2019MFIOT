@@ -23,6 +23,7 @@
 
 + 2019年7月9日
     + 会议室最近一年使用情况接口
+    + 会议室中控设备
     
 
 ### 中控设备占比图接口 [GET] /equipmentlist/equip_category/4
@@ -526,6 +527,7 @@
     + whetherMonitor (int) 是否被监控1监控 0非监控
     + meetingRoom  (String)  会议室名字
     + categoryName  (String) 分类名字
+    + floorId (int) 楼层ID
     + floorName (String) 楼层名字
     + model  (String)  型号
     + brandName  (String)  品牌名字
@@ -541,20 +543,19 @@
 
         {
         "meta": {
-            "totalPages": 2,
+            "totalPages": 1,
             "totalElements": 4,
-            "size": 2,
+            "size": 5,
             "number": 1,
-            "numberOfElements": 2,
+            "numberOfElements": 4,
             "first": true,
-            "last": false,
+            "last": true,
             "sort": null
         },
         "links": {
-            "self": "/specificequip?filter[brandIds]=1,2&filter[equipmentCategoryIds]=1,2,3,6&page[number]=1&page[size]=2",
-            "first": "/specificequip?filter[brandIds]=1,2&filter[equipmentCategoryIds]=1,2,3,6&page[number]=1&page[size]=2",
-            "next": "/specificequip?filter[brandIds]=1,2&filter[equipmentCategoryIds]=1,2,3,6&page[number]=2&page[size]=2",
-            "last": "/specificequip?filter[brandIds]=1,2&filter[equipmentCategoryIds]=1,2,3,6&page[number]=2&page[size]=2"
+            "self": "/specificequip?filter[brandIds]=1,2&filter[equipmentCategoryIds]=1,2,3,6&page[number]=1&page[size]=5",
+            "first": "/specificequip?filter[brandIds]=1,2&filter[equipmentCategoryIds]=1,2,3,6&page[number]=1&page[size]=5",
+            "last": "/specificequip?filter[brandIds]=1,2&filter[equipmentCategoryIds]=1,2,3,6&page[number]=1&page[size]=5"
         },
         "data": [
             {
@@ -576,6 +577,7 @@
                 "meetingRoom": "一层大报告厅",
                 "categoryName": "灯控制器",
                 "floorName": "11层00",
+                "floorId": 21,
                 "model": "LNUSB-00B",
                 "brandName": "Leviton"
             },
@@ -592,12 +594,57 @@
                 "usedTime": 4,
                 "presentStatueId": 1,
                 "picture": "https://static.mifanxing.com/yyren/image/149/53/3511737.jpg?w=200",
-                "useNumber": 1,
+                "useNumber": 2,
                 "failureNumber": 1,
                 "whetherMonitor": 0,
                 "meetingRoom": "一层大报告厅",
                 "categoryName": "显示器",
                 "floorName": "11层00",
+                "floorId": 21,
+                "model": "QM65H",
+                "brandName": "SAMSUNG"
+            },
+            {
+                "id": 12,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "equipmentNo": 1012,
+                "name": "65寸显示屏",
+                "locationId": 4,
+                "equipmentId": 2,
+                "usedTime": 3,
+                "presentStatueId": 1,
+                "picture": "https://static.mifanxing.com/yyren/image/149/53/3511737.jpg?w=200",
+                "useNumber": 12,
+                "failureNumber": 1,
+                "whetherMonitor": 0,
+                "meetingRoom": "八层大会议室",
+                "categoryName": "显示器",
+                "floorName": "楼八层",
+                "floorId": 20,
+                "model": "QM65H",
+                "brandName": "SAMSUNG"
+            },
+            {
+                "id": 16,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "equipmentNo": 1016,
+                "name": "65寸显示屏",
+                "locationId": 8,
+                "equipmentId": 2,
+                "usedTime": 8,
+                "presentStatueId": 1,
+                "picture": "https://static.mifanxing.com/yyren/image/149/53/3511737.jpg?w=200",
+                "useNumber": 16,
+                "failureNumber": 1,
+                "whetherMonitor": 0,
+                "meetingRoom": "八层会议室",
+                "categoryName": "显示器",
+                "floorName": "楼八层",
+                "floorId": 20,
                 "model": "QM65H",
                 "brandName": "SAMSUNG"
             }
