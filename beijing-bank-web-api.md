@@ -23,7 +23,7 @@
 
 + 2019年7月9日
     + 会议室最近一年使用情况接口
-    + 会议室中控设备
+    + 中控主机与受控设备状态接口
     
 
 ### 中控设备占比图接口 [GET] /equipmentlist/equip_category/4
@@ -537,8 +537,8 @@
     + page[number] (int)  页码 -非必填 默认为1
     + page[size] (int)  页尺 -非必填 默认为10
     + filter[locationId] (String) 位置id
-    + filter[brandIds] (String) 品牌id,使用逗号隔开
-    + filter[equipmentCategoryIds] (String) 分类id，使用逗号隔开
+    + filter[brandIds] (String) 非必填 品牌id,使用逗号隔开
+    + filter[equipmentCategoryIds] (String) 非必填 分类id，使用逗号隔开
 + Response 200  
 
         {
@@ -875,3 +875,89 @@
             "2018-09": 0
         }
         }
+        
+### 中控主机与受控设备状态接口 [GET] /specificequip
+
++ Data
+    + id (int) ID
+    + enabled (int)  1使能  0禁用
+    + creator (int) 创建人ID
+    + modifier (int) 修改人ID
+    + modified  (datetime) 修改时间
+    + equipmentNo (int) 自定义编码
+    + name (String) 设备名字
+    + locationId (int) 位置ID
+    + equipmentId (int)  设备ID
+    + usedTime (int)  已经使用时长
+    + presentStatueId (int) 设备状态 0关闭，1正常 ，2故障
+    + picture  (String) 设备图片
+    + useNumber (int) 使用次数
+    + failureNumber (int) 故障次数
+    + whetherMonitor (int) 是否被监控1监控 0非监控
+    + meetingRoom  (String)  会议室名字
+    + categoryName  (String) 分类名字
+    + floorId (int) 楼层ID
+    + floorName (String) 楼层名字
+    + model  (String)  型号
+    + brandName  (String)  品牌名字  
+    + brandLogo  (String) 品牌logo
+    + averWeekRunNumber (float) 周平均运行次数
+    + weekRunNumber (Map) 周每日运行次数
+
++ Description
++ Parameters
+    + filter[locationId] (int)  会议室ID  -必填
+    + filter[isCenterControl]  (int)  是否是中控 1为中控 0为非中控
++ Response 200  
+
+        {
+        "meta": {
+            "totalPages": 1,
+            "totalElements": 1,
+            "size": 10,
+            "number": 1,
+            "numberOfElements": 1,
+            "first": true,
+            "last": true,
+            "sort": null
+        },
+            "links": {
+            "self": "/specificequip?filter[isCenterControl]=1&filter[locationId]=8&page[number]=1&page[size]=10",
+            "first": "/specificequip?filter[isCenterControl]=1&filter[locationId]=8&page[number]=1&page[size]=10",
+            "last": "/specificequip?filter[isCenterControl]=1&filter[locationId]=8&page[number]=1&page[size]=10"
+        },
+        "data": [
+            {
+                "id": 20,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "equipmentNo": 0,
+                "name": "中控ev",
+                "locationId": 8,
+                "equipmentId": 10,
+                "usedTime": 1,
+                "presentStatueId": 1,
+                "picture": "https://static.mifanxing.com/yyren/image/149/53/3511737.jpg?w=200",
+                "useNumber": 20,
+                "failureNumber": 1,
+                "whetherMonitor": 0,
+                "meetingRoom": "八层会议室",
+                "categoryName": "中控",
+                "floorName": "楼八层",
+                "floorId": 20,
+                "model": "AMX2001",
+                "brandName": "AMX",
+                "brandLogo": "https://static.mifanxing.com/yyren/image/113/28/1864145.jpg?w=200&h=90",
+                "weekRunNumber": {
+                    "1": 1,
+                    "2": 0,
+                    "3": 1,
+                    "4": 2,
+                    "5": 3
+                },
+                "averWeekRunNumber": 1.2
+            }
+            ]
+        }
+        
