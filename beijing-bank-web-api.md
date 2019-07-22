@@ -877,6 +877,7 @@
         }
         
 ### 中控主机与受控设备状态接口 [GET] /specificequip
+例如：http://127.0.0.1:8999/specificequip?filter[isCenterControl]=1&filter[locationId]=8
 
 + Data
     + id (int) ID
@@ -921,7 +922,7 @@
             "last": true,
             "sort": null
         },
-            "links": {
+        "links": {
             "self": "/specificequip?filter[isCenterControl]=1&filter[locationId]=8&page[number]=1&page[size]=10",
             "first": "/specificequip?filter[isCenterControl]=1&filter[locationId]=8&page[number]=1&page[size]=10",
             "last": "/specificequip?filter[isCenterControl]=1&filter[locationId]=8&page[number]=1&page[size]=10"
@@ -954,10 +955,12 @@
                     "2": 0,
                     "3": 1,
                     "4": 2,
-                    "5": 3
+                    "5": 3,
+                    "6": 3,
+                    "7": 0
                 },
                 "averWeekRunNumber": 1.2
             }
-            ]
-        }
+        ]
+    }
         
