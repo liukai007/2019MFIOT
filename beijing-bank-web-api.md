@@ -25,6 +25,7 @@
     + 会议室最近一年使用情况接口
     + 中控主机与受控设备状态接口
     + 上月会议室使用排行接口
+    + 会议室使用情况趋势图接口
     
 
 ### 中控设备占比图接口 [GET] /equipmentlist/equip_category/4
@@ -1075,3 +1076,117 @@
             }
         ]
         }
+
+### 会议室使用情况趋势图接口 [GET] /logs/usedcondition
+
++ Data
+    + id (int) ID
+    + name (string) 会议室名字
+    + locationNo (int) 使用次数
+
++ Description
++ Parameters
+    + filter[year] (string)  年 -必填
+    + filter[month] (string) 月
+    + filter[day] (string) 日
++ Response 200   
+
+        {
+        "data": [
+            {
+                "id": 3,
+                "name": "一层大报告厅",
+                "locationNo": 0
+            },
+            {
+                "id": 4,
+                "name": "八层大会议室",
+                "locationNo": 0
+            },
+            {
+                "id": 5,
+                "name": "六层会议室",
+                "locationNo": 0
+            },
+            {
+                "id": 6,
+                "name": "五层会议室",
+                "locationNo": 0
+            },
+            {
+                "id": 7,
+                "name": "七层会议室",
+                "locationNo": 0
+            },
+            {
+                "id": 8,
+                "name": "八层会议室",
+                "locationNo": 0
+            },
+            {
+                "id": 26,
+                "name": "11层大会议室",
+                "locationNo": 0
+            },
+            {
+                "id": 27,
+                "name": "11层会议室1",
+                "locationNo": 0
+            },
+            {
+                "id": 28,
+                "name": "11层会议室2",
+                "locationNo": 0
+            },
+            {
+                "id": 29,
+                "name": "11层会议室3",
+                "locationNo": 0
+            },
+            {
+                "id": 31,
+                "name": "11层会议室4",
+                "locationNo": 0
+            },
+            {
+                "id": 32,
+                "name": "11层会议室5",
+                "locationNo": 0
+            },
+            {
+                "id": 33,
+                "name": "11层会议室6",
+                "locationNo": 0
+            },
+            {
+                "id": 34,
+                "name": "11层会议室7",
+                "locationNo": 0
+            },
+            {
+                "id": 35,
+                "name": "11层会议室8",
+                "locationNo": 0
+            },
+            {
+                "id": 36,
+                "name": "11层会议室9",
+                "locationNo": 0
+            },
+            {
+                "id": 37,
+                "name": "11层会议室10",
+                "locationNo": 0
+            },
+            {
+                "id": 38,
+                "name": "11层会议室11",
+                "locationNo": 0
+            },
+            {
+                "id": 39,
+                "name": "11层会议室12",
+                "locationNo": 1
+            }
+        ]
+    }
