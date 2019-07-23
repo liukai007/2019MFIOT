@@ -511,7 +511,7 @@
 
 ### 设备状态接口 [GET] /specificequip
 
-/specificequip?filter[brandIds]=1,2&filter[equipmentCategoryIds]=1,2,3,6&page[number]=1&page[size]=5&filter[locationId]=x,x,x
+/specificequip?filter[brandIds]=1,2&filter[equipmentCategoryIds]=1,2,3,6&page[number]=1&page[size]=5&filter[locationId]=x
 
 + Data
     + id (int) ID
@@ -540,7 +540,7 @@
 + Parameters
     + page[number] (int)  页码 -非必填 默认为1
     + page[size] (int)  页尺 -非必填 默认为10
-    + filter[locationId] (String) 位置id 用逗号隔开
+    + filter[locationId] (int) 位置id 
     + filter[brandIds] (String) 非必填 品牌id,使用逗号隔开
     + filter[equipmentCategoryIds] (String) 非必填 分类id，使用逗号隔开
 + Response 200  
