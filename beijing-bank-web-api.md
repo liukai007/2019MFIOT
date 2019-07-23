@@ -540,7 +540,7 @@
 + Parameters
     + page[number] (int)  页码 -非必填 默认为1
     + page[size] (int)  页尺 -非必填 默认为10
-    + filter[locationId] (int) 位置id 
+    + filter[locationId] (int) 位置id (可以是楼层ID,也可以说会议室id,如果是楼层id，就把该楼层所有会议室都查出来，如果是会议室id，只查该会议室)
     + filter[brandIds] (String) 非必填 品牌id,使用逗号隔开
     + filter[equipmentCategoryIds] (String) 非必填 分类id，使用逗号隔开
 + Response 200  
