@@ -26,7 +26,7 @@
     + 中控主机与受控设备状态接口
     + 上月会议室使用排行接口
     + 会议室使用情况趋势图接口
-    
+
 
 ### 中控设备占比图接口 [GET] /equipmentlist/equip_category/4
 + Data
@@ -543,6 +543,7 @@
     + filter[locationId] (int) 位置id (可以是楼层ID,也可以说会议室id,如果是楼层id，就把该楼层所有会议室都查出来，如果是会议室id，只查该会议室)
     + filter[brandIds] (String) 非必填 品牌id,使用逗号隔开
     + filter[equipmentCategoryIds] (String) 非必填 分类id，使用逗号隔开
+    + filter[statue] (int) 0关闭，1正常 ，2故障(不填为全部)
 + Response 200  
 
         {
