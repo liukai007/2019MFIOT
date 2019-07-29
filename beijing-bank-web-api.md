@@ -26,6 +26,7 @@
     + 中控主机与受控设备状态接口
     + 上月会议室使用排行接口
     + 会议室使用情况趋势图接口
+    + 异常状态设备数目
 
 
 ### 中控设备占比图接口 [GET] /equipmentlist/equip_category/4
@@ -1193,3 +1194,15 @@
             }
         ]
     }
+
+### 异常状态设备数目 [GET] /specificequip/exception
+
++ Data
+    + date (int) 异常状态的数目
++ Description
++ Parameters
++ Response 200  
+
+        {
+        "data": 2
+        }
