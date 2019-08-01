@@ -1,5 +1,4 @@
 # MFIOT管理端接口文档
-https://github.com/liukai007/2019MFIOT/edit/master/mfiot-api.md
 
 + 2019年4月12日
     + 图片上传接口
@@ -46,6 +45,13 @@ https://github.com/liukai007/2019MFIOT/edit/master/mfiot-api.md
     + 修改指定设备
     + 查询指定设备
     + 查询会议室ID查询指定设备列表
+
++ 2019年8月1日
+    + 新增品牌
+    + 删除品牌
+    + 修改品牌
+    + 查询品牌
+    + 查询品牌列表
 
 ## 图片上传
 ### 图片上传接口 [POST] /fileUpload
@@ -1518,3 +1524,223 @@ https://github.com/liukai007/2019MFIOT/edit/master/mfiot-api.md
         }
         ]
         }
+
+## 品牌管理
++ Data
+    + id (int) ID
+    + brandName (String) 品牌名字
+    + brandLogo (String) 品牌logo
+    + enabled (int)  - 使能  0禁止 1启用
+    + creator (long) - 创建人
+    + modifier (long) - 修改人
+    + created (date) - 创建时间
+    + modified (date) - 修改时间
+
+### 新增品牌 [POST] 
+
++ Description
+    + [MUST] authenticated
+    + [MUST] ROLE_ADMIN
+
++ Request (application/json)
+
+        {
+        "data": {
+            "enabled": 1,
+            "creator": 0,
+            "modifier": 0,
+            "brandName": "111",
+            "brandLogo": "https://static.mifanxing.com/yyren/image/113/28/1864145.jpg?w=200&h=90"
+        }
+        }
++ Response 200
+
+        {
+        "data": {
+            "id": 11,
+            "type": "Brand"
+        }
+        }
++ Response 400
+
+        {
+        "data": {
+            "msg": "品牌名不允许为空",
+            "code": 400
+        }
+        }
+        
++ Response 401 
+        
+        {
+        "data": {
+            "msg": "请登陆获取认证",
+            "code": 401
+        }
+        }
+
+### 删除品牌 [DEL]  /brand
+
++ Description
+    + [MUST] authenticated
+    + [MUST] ROLE_ADMIN
++ Response 200  
+
+### 修改品牌 [PATCH]  /brand/{id}
+
++ Description
+    + [MUST] authenticated
+    + [MUST] ROLE_ADMIN
+
++ Request (application/json)
+    
+        {
+        "data": {
+            "enabled": 1,
+            "creator": 0,
+            "modifier": 0,
+            "brandName": "Leviton1",
+            "brandLogo": "https://static.mifanxing.com/yyren/image/113/28/1864145.jpg?w=200&h=90"
+        }
+        }
+
++ Response 200
++ Response 400
+
+        {
+        "data": {
+            "msg": "品牌名不允许为空",
+            "code": 400
+        }
+        }
+
+### 查询品牌 [GET]  /brand/{id}
+
++ Description
+    
++ Response 200
+
+        {
+        "data": {
+            "id": 1,
+            "enabled": 1,
+            "creator": 0,
+            "modifier": 0,
+            "brandName": "Leviton",
+            "brandLogo": "https://static.mifanxing.com/yyren/image/113/28/1864145.jpg?w=200&h=90"
+        }
+        }
+
+### 查询品牌列表 [GET]  /brand
+
++ Description
+    
++ Parameters
+    + page[number] (int)  页码  -非必填
+    + page[size]  (int)   页尺  -非必填
+
++ Response 200
+
+        {
+        "meta": {
+            "totalPages": 1,
+            "totalElements": 9,
+            "size": 10,
+            "number": 1,
+            "numberOfElements": 9,
+            "first": true,
+            "last": true,
+            "sort": null
+        },
+        "links": {
+            "self": "/brand?page[number]=1&page[size]=10",
+            "first": "/brand?page[number]=1&page[size]=10",
+            "last": "/brand?page[number]=1&page[size]=10"
+        },
+        "data": [
+            {
+                "id": 1,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "brandName": "Leviton",
+                "brandLogo": "https://static.mifanxing.com/yyren/image/113/28/1864145.jpg?w=200&h=90"
+            },
+            {
+                "id": 2,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2019-07-03 13:08:49",
+                "modified": "2019-07-03 13:08:51",
+                "brandName": "SAMSUNG",
+                "brandLogo": "https://static.mifanxing.com/yyren/image/113/28/1864145.jpg?w=200&h=90"
+            },
+            {
+                "id": 3,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "brandName": "EXTRON",
+                "brandLogo": "https://static.mifanxing.com/yyren/image/113/28/1864145.jpg?w=200&h=90"
+            },
+            {
+                "id": 4,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "brandName": "BENQ",
+                "brandLogo": "https://static.mifanxing.com/yyren/image/113/28/1864145.jpg?w=200&h=90"
+            },
+            {
+                "id": 5,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "brandName": "NEC",
+                "brandLogo": "https://static.mifanxing.com/yyren/image/113/28/1864145.jpg?w=200&h=90"
+            },
+            {
+                "id": 6,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2019-07-03 14:17:55",
+                "modified": "2019-07-03 14:17:52",
+                "brandName": "MAXHUB",
+                "brandLogo": "https://static.mifanxing.com/yyren/image/113/28/1864145.jpg?w=200&h=90"
+            },
+            {
+                "id": 7,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2019-07-03 14:17:48",
+                "modified": "2019-07-03 14:17:45",
+                "brandName": "GORSEE",
+                "brandLogo": "https://static.mifanxing.com/yyren/image/113/28/1864145.jpg?w=200&h=90"
+            },
+            {
+                "id": 8,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2019-07-03 14:17:39",
+                "modified": "2019-07-03 14:17:42",
+                "brandName": "AMX",
+                "brandLogo": "https://static.mifanxing.com/yyren/image/113/28/1864145.jpg?w=200&h=90"
+            },
+            {
+                "id": 9,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2019-07-03 14:17:32",
+                "modified": "2019-07-03 14:17:36",
+                "brandName": "AMX1",
+                "brandLogo": "https://static.mifanxing.com/yyren/image/113/28/1864145.jpg?w=200&h=90"
+            }
+        ]
+        }
+
+        
