@@ -183,7 +183,7 @@
         }
         }
         
-### 管理员修改用户 [PATCH] /user//updateUserByAdmin/{id}  
+### 管理员修改用户 [PATCH] /user/updateUserByAdmin/{id}  
 + Description
     + [MUST] authenticated
     + [MUST] ROLE_ADMIN
