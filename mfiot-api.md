@@ -157,11 +157,13 @@
     
         {
         "data": {
-            "username": "liukai0099",
-            "headPortrait": "http://www.headPortrait",
-            "phoneNumber": "13126822398",
-            "originalPassword":"budee1234",
-            "password":"budee1234"
+            "username": "admin",
+            "headPortrait": "https://static.mifanxing.com/iyyren/image/201609/16/1725/120297960490811392.jpg",
+            "phoneNumber": "13326822398",
+            "email": "850@qq.com",
+            "role": 1,
+            "password":"budee1234",
+            "originalPassword":"budee123"
         }
         }
 + Response 200
