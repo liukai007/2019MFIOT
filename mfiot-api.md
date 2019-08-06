@@ -52,6 +52,7 @@
     + 修改品牌
     + 查询品牌
     + 查询品牌列表
+    + 通过名字查询品牌
 
 ## 图片上传
 ### 图片上传接口 [POST] /fileUpload
@@ -214,8 +215,11 @@
         "data": {
             "creator": 0,
             "modifier": 1,
-            "modified": "2019-04-19 19:11:17",
-            "username": "liukai0099",
+            "modified": "2019-04-19 19:10:14",
+            "username": "admin",
+            "headPortrait": "https://static.mifanxing.com/iyyren/image/201609/16/1725/120297960490811392.jpg",
+            "phoneNumber": "13126822398",
+            "email": "850@qq.com",
             "role": 1
         }
         }
@@ -255,6 +259,9 @@
                 "modifier": 1,
                 "modified": "2019-04-19 19:10:14",
                 "username": "admin",
+                "headPortrait": "https://static.mifanxing.com/iyyren/image/201609/16/1725/120297960490811392.jpg",
+                "phoneNumber": "13126822398",
+                "email": "850@qq.com",
                 "role": 1
             },
             {
@@ -262,7 +269,10 @@
                 "creator": 0,
                 "modifier": 1,
                 "modified": "2019-04-19 19:11:17",
-                "username": "liukai0099",
+                "username": "liukai",
+                "headPortrait": "https://static.mifanxing.com/iyyren/image/201609/16/1725/120297960490811392.jpg",
+                "phoneNumber": "13126822398",
+                "email": "850@qq.com",
                 "role": 1
             },
             {
@@ -270,6 +280,9 @@
                 "creator": 0,
                 "modifier": 0,
                 "username": "admin1",
+                "headPortrait": "https://static.mifanxing.com/iyyren/image/201609/16/1725/120297960490811392.jpg",
+                "phoneNumber": "13126822398",
+                "email": "850@qq.com",
                 "role": 0
             },
             {
@@ -279,6 +292,9 @@
                 "created": "2019-04-02 10:12:49",
                 "modified": "2019-04-02 10:12:49",
                 "username": "admin22221",
+                "headPortrait": "https://static.mifanxing.com/iyyren/image/201609/16/1725/120297960490811392.jpg",
+                "phoneNumber": "13126822398",
+                "email": "850@qq.com",
                 "role": 0
             },
             {
@@ -288,51 +304,69 @@
                 "created": "2019-04-02 10:18:34",
                 "modified": "2019-04-02 10:18:34",
                 "username": "admin2222221",
+                "headPortrait": "https://static.mifanxing.com/iyyren/image/201609/16/1725/120297960490811392.jpg",
+                "phoneNumber": "13126822398",
+                "email": "850@qq.com",
                 "role": 0
             },
             {
                 "id": 8,
                 "creator": 0,
                 "modifier": 0,
-                "created": "2019-04-03 07:12:39",
-                "modified": "2019-04-03 07:12:39",
+                "created": "2019-04-02 19:12:39",
+                "modified": "2019-04-02 19:12:39",
                 "username": "LIUKAI007",
+                "headPortrait": "https://static.mifanxing.com/iyyren/image/201609/16/1725/120297960490811392.jpg",
+                "phoneNumber": "13126822398",
+                "email": "850@qq.com",
                 "role": 0
             },
             {
                 "id": 9,
                 "creator": 0,
                 "modifier": 0,
-                "created": "2019-04-03 08:28:42",
-                "modified": "2019-04-03 08:28:42",
+                "created": "2019-04-02 20:28:42",
+                "modified": "2019-04-02 20:28:42",
                 "username": "1233LIUKAI007",
+                "headPortrait": "https://static.mifanxing.com/iyyren/image/201609/16/1725/120297960490811392.jpg",
+                "phoneNumber": "13126822398",
+                "email": "850@qq.com",
                 "role": 0
             },
             {
                 "id": 10,
                 "creator": 0,
                 "modifier": 0,
-                "created": "2019-04-03 22:29:34",
-                "modified": "2019-04-03 22:29:34",
+                "created": "2019-04-03 10:29:34",
+                "modified": "2019-04-03 10:29:34",
                 "username": "lk11",
+                "headPortrait": "https://static.mifanxing.com/iyyren/image/201609/16/1725/120297960490811392.jpg",
+                "phoneNumber": "13126822398",
+                "email": "850@qq.com",
                 "role": 0
             },
             {
                 "id": 12,
                 "creator": 0,
                 "modifier": 0,
-                "created": "2019-04-04 23:27:05",
-                "modified": "2019-04-04 23:27:05",
+                "created": "2019-04-04 11:27:05",
+                "modified": "2019-04-04 11:27:05",
                 "username": "lk008",
+                "headPortrait": "https://static.mifanxing.com/iyyren/image/201609/16/1725/120297960490811392.jpg",
+                "phoneNumber": "13126822398",
+                "email": "850@qq.com",
                 "role": 1
             },
             {
-                "id": 13,
-                "creator": 0,
-                "modifier": 0,
-                "created": "2019-04-13 02:34:57",
-                "modified": "2019-04-13 02:34:57",
-                "username": "国产007",
+                "id": 14,
+                "creator": 1,
+                "modifier": 1,
+                "created": "2019-04-12 14:39:39",
+                "modified": "2019-04-12 14:39:39",
+                "username": "国产0071",
+                "headPortrait": "https://static.mifanxing.com/iyyren/image/201609/16/1725/120297960490811392.jpg",
+                "phoneNumber": "13126822398",
+                "email": "850@qq.com",
                 "role": 0
             }
         ]
@@ -571,20 +605,26 @@
 
 ## 主设备管理
 + Data
+    + id (int) ID
     + equipmentCategoryId (Long) 设备分类ID
     + name (String)  设备名字
     + equipPicture (String) 设备图片
+    + brandId  (int) 品牌id
     + brand (String)  品牌
     + brandLogo (String) -品牌logo
     + model (String) -型号
     + lifetime (Double)  -寿命（可以说使用最长时间单位小时）
     + description (String) -描述
+    + whetherControlled (String) 1为受控 0为不受控
     + referenceTime (Long) -被会议室引用了次数
     + enabled (int)  - 使能  0禁止 1启用
     + creator (long) - 创建人
     + modifier (long) - 修改人
     + created (date) - 创建时间
     + modified (date) - 修改时间
+}
+
+    
 ### 新增主设备 [POST] /equipmentlist
 
 + Description
@@ -595,11 +635,10 @@
 
         {
         "data": {
-        	"equipmentCategoryId":"1",
+            "equipmentCategoryId": "1",
             "name": "中控001",
-            "equipPicture":"http://www.picture",
-            "brand":"AMX",
-            "brandLogo":"http://www.picture",
+            "equipPicture": "http://www.picture",
+            "brandId": "1",
             "model": "AMX2001",
             "description": "describedescribedescribedescribedescribedescribedescribe"
         }
@@ -656,11 +695,10 @@
     
         {
         "data": {
-        	"equipmentCategoryId":"1",
-            "name": "222",
-            "equipPicture":"http://www.picture",
-            "brand":"AMX1",
-            "brandLogo":"http://www.picture",
+            "equipmentCategoryId": "1",
+            "name": "中控001",
+            "equipPicture": "http://www.picture",
+            "brandId": "1",
             "model": "AMX2001",
             "description": "describedescribedescribedescribedescribedescribedescribe"
         }
@@ -675,16 +713,21 @@
 
         {
         "data": {
-        "id": 1,
-        "enabled": 1,
-        "creator": 0,
-        "modifier": 0,
-        "equipmentCategoryId": 1,
-        "name": "灯控网络接口",
-        "brand": "Leviton",
-        "brandLogo": "",
-        "model": "LNUSB-00B",
-        "lifetime": 0
+            "id": 1,
+            "enabled": 1,
+            "creator": 0,
+            "modifier": 0,
+            "created": "2019-07-03 03:52:33",
+            "modified": "2019-07-03 03:52:36",
+            "equipmentCategoryId": 1,
+            "name": "灯控网络接口",
+            "equipPicture": "https://static.mifanxing.com/yyren/image/149/53/3511737.jpg?w=200",
+            "brandId": 1,
+            "model": "LNUSB-00B",
+            "lifetime": 0,
+            "description": "desc",
+            "whetherControlled": 1,
+            "referenceTime": 0
         }
         }
         
@@ -720,133 +763,196 @@
             "last": "/equipmentlist?page[number]=1&page[size]=10"
         },
         "data": [
-        {
-            "id": 1,
-            "enabled": 1,
-            "creator": 0,
-            "modifier": 0,
-            "equipmentCategoryId": 1,
-            "name": "灯控网络接口",
-            "brand": "Leviton",
-            "brandLogo": "",
-            "model": "LNUSB-00B",
-            "lifetime": 0
-        },
-        {
-            "id": 2,
-            "enabled": 1,
-            "creator": 0,
-            "modifier": 0,
-            "equipmentCategoryId": 6,
-            "name": "主席台返看显示器",
-            "brand": "SAMSUNG",
-            "brandLogo": "",
-            "model": "QM65H",
-            "lifetime": 0
-        },
-        {
-            "id": 3,
-            "enabled": 1,
-            "creator": 0,
-            "modifier": 0,
-            "equipmentCategoryId": 3,
-            "name": "矩阵切换器",
-            "brand": "EXTRON",
-            "brandLogo": "",
-            "model": "XTP II CrossPoint 32",
-            "lifetime": 0
-        },
-        {
-            "id": 4,
-            "enabled": 1,
-            "creator": 0,
-            "modifier": 0,
-            "equipmentCategoryId": 2,
-            "name": "高清投影机",
-            "brand": "BENQ",
-            "brandLogo": "",
-            "model": "P1660",
-            "lifetime": 0
-        },
-        {
-            "id": 5,
-            "enabled": 1,
-            "creator": 0,
-            "modifier": 0,
-            "equipmentCategoryId": 5,
-            "name": "数字音频处理器",
-            "brand": "EXTRON",
-            "brandLogo": "",
-            "model": "DMP128",
-            "lifetime": 0
-        },
-        {
-            "id": 6,
-            "enabled": 1,
-            "creator": 0,
-            "modifier": 0,
-            "equipmentCategoryId": 2,
-            "name": "高清投影机",
-            "brand": "NEC",
-            "brandLogo": "",
-            "model": "PX1005QL",
-            "lifetime": 0
-        },
-        {
-            "id": 8,
-            "enabled": 1,
-            "creator": 0,
-            "modifier": 0,
-            "equipmentCategoryId": 7,
-            "name": "会议平板",
-            "brand": "MAXHUB",
-            "brandLogo": "",
-            "model": "PC75MJ",
-            "lifetime": 0
-        },
-        {
-            "id": 9,
-            "enabled": 1,
-            "creator": 0,
-            "modifier": 0,
-            "equipmentCategoryId": 8,
-            "name": "120寸投影幕（16:10）",
-            "brand": "GORSEE",
-            "brandLogo": "",
-            "model": "GS-E120B",
-            "lifetime": 0
-        },
-        {
-            "id": 10,
-            "enabled": 1,
-            "creator": 0,
-            "modifier": 0,
-            "created": "2019-04-18 17:29:44",
-            "modified": "2019-04-18 17:29:44",
-            "equipmentCategoryId": 1,
-            "name": "中控001",
-            "equipPicture": "http://www.picture",
-            "brand": "AMX",
-            "brandLogo": "http://www.picture",
-            "model": "AMX2001",
-            "lifetime": 0
-        },
-        {
-            "id": 13,
-            "enabled": 1,
-            "creator": 0,
-            "modifier": 0,
-            "created": "2019-04-18 18:51:08",
-            "modified": "2019-04-18 18:52:39",
-            "equipmentCategoryId": 1,
-            "name": "222",
-            "equipPicture": "http://www.picture",
-            "brand": "AMX1",
-            "brandLogo": "http://www.picture",
-            "model": "AMX2001",
-            "lifetime": 0,
-            "description": "describedescribedescribedescribedescribedescribedescribe"
-        }
+            {
+                "id": 1,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2019-07-03 03:52:33",
+                "modified": "2019-07-03 03:52:36",
+                "equipmentCategoryId": 1,
+                "name": "灯控网络接口",
+                "equipPicture": "https://static.mifanxing.com/yyren/image/149/53/3511737.jpg?w=200",
+                "brandId": 1,
+                "brand": "Leviton1",
+                "brandLogo": "https://static.mifanxing.com/yyren/image/113/28/1864145.jpg?w=200&h=90",
+                "model": "LNUSB-00B",
+                "lifetime": 0,
+                "description": "desc",
+                "whetherControlled": 1,
+                "referenceTime": 0
+            },
+            {
+                "id": 2,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2019-07-03 03:52:30",
+                "modified": "2019-07-03 03:52:39",
+                "equipmentCategoryId": 6,
+                "name": "主席台返看显示器",
+                "equipPicture": "https://static.mifanxing.com/yyren/image/149/53/3511737.jpg?w=200",
+                "brandId": 2,
+                "brand": "SAMSUNG",
+                "brandLogo": "https://static.mifanxing.com/yyren/image/113/28/1864145.jpg?w=200&h=90",
+                "model": "QM65H",
+                "lifetime": 0,
+                "description": "desc",
+                "whetherControlled": 1,
+                "referenceTime": 0
+            },
+            {
+                "id": 3,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2019-07-03 03:52:26",
+                "modified": "2019-07-03 03:52:42",
+                "equipmentCategoryId": 3,
+                "name": "矩阵切换器",
+                "equipPicture": "https://static.mifanxing.com/yyren/image/149/53/3511737.jpg?w=200",
+                "brandId": 3,
+                "brand": "EXTRON",
+                "brandLogo": "https://static.mifanxing.com/yyren/image/113/28/1864145.jpg?w=200&h=90",
+                "model": "XTP II CrossPoint 32",
+                "lifetime": 0,
+                "description": "desc",
+                "whetherControlled": 1,
+                "referenceTime": 0
+            },
+            {
+                "id": 4,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2019-07-03 03:52:23",
+                "modified": "2019-07-03 03:52:44",
+                "equipmentCategoryId": 2,
+                "name": "高清投影机",
+                "equipPicture": "https://static.mifanxing.com/yyren/image/149/53/3511737.jpg?w=200",
+                "brandId": 4,
+                "brand": "BENQ",
+                "brandLogo": "https://static.mifanxing.com/yyren/image/113/28/1864145.jpg?w=200&h=90",
+                "model": "P1660",
+                "lifetime": 0,
+                "description": "desc",
+                "whetherControlled": 1,
+                "referenceTime": 0
+            },
+            {
+                "id": 5,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2019-07-03 03:52:19",
+                "modified": "2019-07-03 03:52:47",
+                "equipmentCategoryId": 5,
+                "name": "数字音频处理器",
+                "equipPicture": "https://static.mifanxing.com/yyren/image/149/53/3511737.jpg?w=200",
+                "brandId": 3,
+                "brand": "EXTRON",
+                "brandLogo": "https://static.mifanxing.com/yyren/image/113/28/1864145.jpg?w=200&h=90",
+                "model": "DMP128",
+                "lifetime": 0,
+                "description": "desc",
+                "whetherControlled": 1,
+                "referenceTime": 0
+            },
+            {
+                "id": 6,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2019-07-03 03:52:17",
+                "modified": "2019-07-03 03:52:50",
+                "equipmentCategoryId": 2,
+                "name": "高清投影机",
+                "equipPicture": "https://static.mifanxing.com/yyren/image/149/53/3511737.jpg?w=200",
+                "brandId": 5,
+                "brand": "NEC",
+                "brandLogo": "https://static.mifanxing.com/yyren/image/113/28/1864145.jpg?w=200&h=90",
+                "model": "PX1005QL",
+                "lifetime": 0,
+                "description": "desc",
+                "whetherControlled": 1,
+                "referenceTime": 0
+            },
+            {
+                "id": 8,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2019-07-03 03:52:15",
+                "modified": "2019-07-03 03:52:53",
+                "equipmentCategoryId": 7,
+                "name": "会议平板",
+                "equipPicture": "https://static.mifanxing.com/yyren/image/149/53/3511737.jpg?w=200",
+                "brandId": 6,
+                "brand": "MAXHUB",
+                "brandLogo": "https://static.mifanxing.com/yyren/image/113/28/1864145.jpg?w=200&h=90",
+                "model": "PC75MJ",
+                "lifetime": 0,
+                "description": "desc",
+                "whetherControlled": 1,
+                "referenceTime": 0
+            },
+            {
+                "id": 9,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2019-07-03 03:52:12",
+                "modified": "2019-07-03 03:52:56",
+                "equipmentCategoryId": 8,
+                "name": "120寸投影幕（16:10）",
+                "equipPicture": "https://static.mifanxing.com/yyren/image/149/53/3511737.jpg?w=200",
+                "brandId": 7,
+                "brand": "GORSEE",
+                "brandLogo": "https://static.mifanxing.com/yyren/image/113/28/1864145.jpg?w=200&h=90",
+                "model": "GS-E120B",
+                "lifetime": 0,
+                "description": "desc",
+                "whetherControlled": 1,
+                "referenceTime": 0
+            },
+            {
+                "id": 10,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2019-04-19 05:29:44",
+                "modified": "2019-04-19 05:29:44",
+                "equipmentCategoryId": 4,
+                "name": "中控001",
+                "equipPicture": "https://static.mifanxing.com/yyren/image/149/53/3511737.jpg?w=200",
+                "brandId": 8,
+                "brand": "AMX",
+                "brandLogo": "https://static.mifanxing.com/yyren/image/113/28/1864145.jpg?w=200&h=90",
+                "model": "AMX2001",
+                "lifetime": 0,
+                "description": "desc",
+                "whetherControlled": 0,
+                "referenceTime": 0
+            },
+            {
+                "id": 13,
+                "enabled": 1,
+                "creator": 0,
+                "modifier": 0,
+                "created": "2019-04-19 06:51:08",
+                "modified": "2019-04-19 06:52:39",
+                "equipmentCategoryId": 4,
+                "name": "中控002",
+                "equipPicture": "https://static.mifanxing.com/yyren/image/149/53/3511737.jpg?w=200",
+                "brandId": 9,
+                "brand": "AMX1",
+                "brandLogo": "https://static.mifanxing.com/yyren/image/113/28/1864145.jpg?w=200&h=90",
+                "model": "AMX2001",
+                "lifetime": 0,
+                "description": "describedescribedescribedescribedescribedescribedescribe",
+                "whetherControlled": 0,
+                "referenceTime": 0
+            }
         ]
         }
 
@@ -864,6 +970,9 @@
     + modifier (long) - 修改人
     + created (date) - 创建时间
     + modified (date) - 修改时间
+     
+
+    
 ### 新增楼层 [POST] /locations/addfloor
 
 + Description
@@ -1743,4 +1852,27 @@
         ]
         }
 
-        
+###  通过名字查询品牌
+
++ Description
+    
++ Parameters
+    + brandName (String)  品牌名（也可以不全）  -必填
++ Response 200
+
+            {
+            "data": [
+                {
+                    "id": 8,
+                    "brandName": "AMX",
+                    "brandLogo": "https://static.mifanxing.com/yyren/image/113/28/1864145.jpg?w=200&h=90"
+                },
+                {
+                    "id": 9,
+                    "brandName": "AMX1",
+                    "brandLogo": "https://static.mifanxing.com/yyren/image/113/28/1864145.jpg?w=200&h=90"
+                }
+            ]
+            }
+
+    
