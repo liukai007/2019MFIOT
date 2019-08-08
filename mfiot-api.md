@@ -1854,7 +1854,7 @@
         ]
         }
 
-###  通过名字查询品牌
+###  通过名字查询品牌 [GET] /brand/getbrandbyname
 
 + Description
     
