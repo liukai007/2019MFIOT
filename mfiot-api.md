@@ -1649,7 +1649,7 @@
     + created (date) - 创建时间
     + modified (date) - 修改时间
 
-### 新增品牌 [POST] 
+### 新增品牌 [POST] /brand
 
 + Description
     + [MUST] authenticated
