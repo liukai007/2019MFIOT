@@ -84,6 +84,7 @@
     + password (String)  密码
     + headPortrait (String) 头像链接
     + phoneNumber (String) 手机号
+    + email (String) 邮箱地址
     + role (int) 角色（1为管理员 0为普通用户）
     + originalPassword (String) 原密码（修改密码时候使用）
     + enabled (int)  - 使能  0禁止 1启用
