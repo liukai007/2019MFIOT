@@ -1326,7 +1326,8 @@
 
         {
         "data": {
-            "Cookie": "JSESSIONID=9080F1D07B0C45B8F1C5564DB861B5AF"
+            "Cookie": "JSESSIONID=3393B0F48BF7C5B943A0F804871FA660",
+            "userid": 39
         }
         }
     
