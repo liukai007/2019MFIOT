@@ -1751,6 +1751,8 @@
 + Parameters
     + page[number] (int)  页码  -非必填
     + page[size]  (int)   页尺  -非必填
+    + filter[brandid]     品牌id -非必填
+    + filter[brandname]   品牌名字  -非必填（模糊查询）
 
 + Response 200
 
