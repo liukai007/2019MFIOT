@@ -235,6 +235,7 @@
     + page[size]  (int)   页尺  -非必填
     + filter[id] (int)    ID  -非必填
     + filter[tel] (String) 电话号  -非必填
+    + filter[username]  (String) 用户名字  -非必填
 
 + Response 200
 
