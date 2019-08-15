@@ -1220,9 +1220,11 @@
 + Parameters
     + page[number] (int)  页码  -非必填
     + page[size]  (int)   页尺  -非必填
-    + filter[locationId]  (int)   位置ID  -非必填 默认值是1（1为起始位置id）
+    + filter[locationId]  (int)   位置ID  -非必填（对应着父ID） 默认值是1（1为起始位置id）
     + filter[locationName] (String)  位置名称  -非必填（模糊查询）
     + filter[floor] (int) 是否floor 0所有位置   1楼层
+    + filter[floorLoctionId]  (int) 楼层ID -非必填
+    + filter[meetingLoctionId] (int) 会议室ID  -非必填
 
 
 + Response 200
@@ -1897,3 +1899,5 @@
                 }
             ]
             }
+
+    
