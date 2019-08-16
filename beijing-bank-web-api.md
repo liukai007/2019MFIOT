@@ -307,17 +307,21 @@
     + inkRelativeRatioUpDown (Int) 1为上升，0为下降
     + weekUsageHighest (String) 上周使用率最高的中控设备
     + totalCount (Long)  会议室总间数
+    + controlWeekServiceState (int) 1为正常 0为故障
+    + controlBreakDownNo (int) 故障设备个数
 
 + Description
 + Response 200  
 
         {
         "data": {
-            "weekUsageRate": 14.8,
-            "linkRelativeRatio": 11,
-            "linkRelativeRatioUpDown": 1,
+            "weekUsageRate": 0,
+            "linkRelativeRatio": 0,
+            "linkRelativeRatioUpDown": 0,
             "weekUsageHighest": null,
-            "totalCount": 2
+            "totalCount": 3,
+            "controlWeekServiceState": 1,
+            "controlBreakDownNo": 0
         }
         }
             
