@@ -1044,6 +1044,7 @@
             "name": "11层大会议室",
             "picture": "http://www.picture",
             "description": "describedescribedescribedescribedescribedescribedescribe",
+            "systemDiagram":"/iot-img/528d8db8-c5e8-4304-9923-ef59ca8ab03a.jpg"
             "leaf": "1"
         }
         }
@@ -1147,6 +1148,7 @@
             "locationNo": 0,
             "description": "describedescribedescribedescribedescribedescribedescribe",
             "picture": "http://www.picture",
+            "systemDiagram":"/iot-img/528d8db8-c5e8-4304-9923-ef59ca8ab03a.jpg"
             "leaf": 1
         }
         }
