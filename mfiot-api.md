@@ -1372,7 +1372,7 @@
     + ip (String) -IP地址 （比如中控需要使用ip地址）
     + port (long) -端口 （比如中控需要使用ip地址）
     + uniqueIdentification -唯一识别码（可以说sn）
-    + usedTime (long) -已经使用时长
+    + usedTime (double) -已使用时长(默认值为0.0小时)
     + presentStatueId (long) -当前状态ID
     + picture (String) -图片链接
     + meetingRoom (String) -会议室名字
