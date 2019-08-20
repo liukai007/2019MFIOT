@@ -1373,7 +1373,7 @@
     + port (long) -端口 （比如中控需要使用ip地址）
     + uniqueIdentification -唯一识别码（可以说sn）
     + usedTime (double) -已使用时长(默认值为0.0小时)
-    + presentStatueId (long) -当前状态ID
+    + presentStatueId (long) -当前状态ID（0关闭状态 1 正常状态  2为故障状态  3为未知状态）
     + picture (String) -图片链接
     + meetingRoom (String) -会议室名字
     + categoryName (String) -设备分类的名字
