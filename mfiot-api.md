@@ -1365,6 +1365,7 @@
 
 ## 指定设备管理（实际会议室使用设备）
 + Data
+    + id (int) ID
     + equipmentNo (int) -设备编号号（记录日志使用）
     + name (String)  -设备名称
     + loctionId (long) -位置的id(主要是设备的id)
@@ -1377,11 +1378,16 @@
     + picture (String) -图片链接
     + meetingRoom (String) -会议室名字
     + categoryName (String) -设备分类的名字
+    + useNumber (int) 使用次数
+    + failureNumber （int） 失败次数
+    + whetherMonitor (int) 是否为主控设备 1为是 0为不是
     + enabled (int)  - 使能  0禁止 1启用
     + creator (long) - 创建人
     + modifier (long) - 修改人
     + created (date) - 创建时间
     + modified (date) - 修改时间
+    
+
 ### 新增指定设备 [POST] /specificequip
 + Description
     + [MUST] authenticated
@@ -1399,7 +1405,8 @@
             "uniqueIdentification":"fff",
             "usedTime":"1000",
             "presentStatueId":"1",
-            "picture":"http://wwww"
+            "picture":"http://wwww",
+            "whetherMonitor":"1"
         }
         }
 + Response 200
@@ -1479,21 +1486,21 @@
 
         {
         "data": {
-            "id": 26,
+            "id": 50,
             "enabled": 1,
-            "creator": 0,
-            "modifier": 0,
-            "created": "2019-04-22 13:12:38",
-            "modified": "2019-04-22 13:12:38",
-            "equipmentNo": 10012,
-            "loctionId": 12,
-            "equipmentId": 222,
-            "ip": "192.168.1.1",
-            "port": 8080,
-            "uniqueIdentification": "fff",
-            "usedTime": 1000,
-            "presentStatueId": 1,
-            "picture": "http://wwww"
+            "creator": 1,
+            "modifier": 1,
+            "created": "2019-08-21 06:38:22",
+            "modified": "2019-08-21 22:16:42",
+            "equipmentNo": 1005,
+            "name": "BENQ高清投影机",
+            "locationId": 3,
+            "equipmentId": 4,
+            "usedTime": 1,
+            "presentStatueId": 0,
+            "useNumber": 0,
+            "failureNumber": 0,
+            "whetherMonitor": 1
         }
         }
 ### 查询会议室ID查询指定设备列表 [GET] /locations/getSpecificEquipByLocationId/{locationId}
@@ -1512,152 +1519,120 @@
 
         {
         "meta": {
-            "totalPages": 3,
-            "totalElements": 25,
+            "totalPages": 1,
+            "totalElements": 5,
             "size": 10,
             "number": 1,
-            "numberOfElements": 10,
+            "numberOfElements": 5,
             "first": true,
-            "last": false,
+            "last": true,
             "sort": null
         },
         "links": {
             "self": "/equipmentlist?page[number]=1&page[size]=10",
             "first": "/equipmentlist?page[number]=1&page[size]=10",
-            "next": "/equipmentlist?page[number]=2&page[size]=10",
-            "last": "/equipmentlist?page[number]=3&page[size]=10"
+            "last": "/equipmentlist?page[number]=1&page[size]=10"
         },
         "data": [
-        {
-            "id": 1,
-            "enabled": 1,
-            "creator": 0,
-            "modifier": 0,
-            "modified": "2019-04-16 13:31:37",
-            "equipmentNo": 1001,
-            "name": "灯控网络接口",
-            "loctionId": 3,
-            "equipmentId": 1,
-            "presentStatueId": 1,
-            "meetingRoom": "八层大会议室",
-            "categoryName": "灯控制器"
-        },
-        {
-            "id": 2,
-            "enabled": 1,
-            "creator": 0,
-            "modifier": 0,
-            "modified": "2019-04-16 13:34:00",
-            "equipmentNo": 1002,
-            "name": "主席台返看显示器",
-            "loctionId": 3,
-            "equipmentId": 2,
-            "presentStatueId": 1,
-            "meetingRoom": "八层大会议室",
-            "categoryName": "显示器"
-        },
-        {
-            "id": 3,
-            "enabled": 1,
-            "creator": 0,
-            "modifier": 0,
-            "modified": "2019-04-16 13:41:55",
-            "equipmentNo": 1003,
-            "name": "矩阵切换器",
-            "loctionId": 3,
-            "equipmentId": 3,
-            "presentStatueId": 1,
-            "meetingRoom": "八层大会议室",
-            "categoryName": "矩阵切换器"
-        },
-        {
-            "id": 4,
-            "enabled": 1,
-            "creator": 0,
-            "modifier": 0,
-            "modified": "2019-04-16 14:25:37",
-            "equipmentNo": 1004,
-            "name": "120寸投影幕（16:10）",
-            "loctionId": 6,
-            "equipmentId": 9,
-            "presentStatueId": 1,
-            "meetingRoom": "八层大会议室",
-            "categoryName": "投影幕"
-        },
-        {
-            "id": 5,
-            "enabled": 1,
-            "creator": 0,
-            "modifier": 0,
-            "equipmentNo": 1005,
-            "name": "高清投影机",
-            "loctionId": 6,
-            "equipmentId": 4,
-            "meetingRoom": "八层大会议室",
-            "categoryName": "投影机"
-        },
-        {
-            "id": 6,
-            "enabled": 1,
-            "creator": 0,
-            "modifier": 0,
-            "equipmentNo": 1006,
-            "name": "会议平板",
-            "loctionId": 6,
-            "equipmentId": 8,
-            "meetingRoom": "八层大会议室",
-            "categoryName": "平板"
-        },
-        {
-            "id": 7,
-            "enabled": 1,
-            "creator": 0,
-            "modifier": 0,
-            "equipmentNo": 1007,
-            "name": "数字音频处理器",
-            "loctionId": 6,
-            "equipmentId": 5,
-            "meetingRoom": "八层大会议室",
-            "categoryName": "数字音频处理器"
-        },
-        {
-            "id": 8,
-            "enabled": 1,
-            "creator": 0,
-            "modifier": 0,
-            "equipmentNo": 1008,
-            "name": "会议平板",
-            "loctionId": 5,
-            "equipmentId": 8,
-            "meetingRoom": "八层大会议室",
-            "categoryName": "平板"
-        },
-        {
-            "id": 9,
-            "enabled": 1,
-            "creator": 0,
-            "modifier": 0,
-            "equipmentNo": 1009,
-            "name": "数字音频处理器",
-            "loctionId": 5,
-            "equipmentId": 5,
-            "meetingRoom": "八层大会议室",
-            "categoryName": "数字音频处理器"
-        },
-        {
-            "id": 10,
-            "enabled": 1,
-            "creator": 0,
-            "modifier": 0,
-            "equipmentNo": 1010,
-            "name": "会议平板",
-            "loctionId": 7,
-            "equipmentId": 8,
-            "meetingRoom": "八层大会议室",
-            "categoryName": "平板"
-        }
-        ]
-        }
+            {
+                "id": 1,
+                "enabled": 1,
+                "creator": 1,
+                "modifier": 1,
+                "created": "2019-08-21 03:34:47",
+                "modified": "2019-08-21 22:13:52",
+                "equipmentNo": 1001,
+                "name": "灯控网络接口",
+                "locationId": 3,
+                "equipmentId": 1,
+                "usedTime": 1,
+                "presentStatueId": 0,
+                "useNumber": 0,
+                "failureNumber": 0,
+                "whetherMonitor": 0,
+                "meetingRoom": "大报告厅",
+                "categoryName": "灯控制器"
+            },
+            {
+                "id": 2,
+                "enabled": 1,
+                "creator": 1,
+                "modifier": 1,
+                "created": "2019-08-21 03:35:24",
+                "modified": "2019-08-21 22:16:18",
+                "equipmentNo": 1002,
+                "name": "中控01",
+                "locationId": 3,
+                "equipmentId": 10,
+                "ip": "192.168.2.138",
+                "port": 8889,
+                "usedTime": 1,
+                "presentStatueId": 0,
+                "useNumber": 0,
+                "failureNumber": 0,
+                "whetherMonitor": 0,
+                "meetingRoom": "大报告厅",
+                "categoryName": "中控"
+            },
+            {
+                "id": 3,
+                "enabled": 1,
+                "creator": 1,
+                "modifier": 1,
+                "created": "2019-08-21 03:36:38",
+                "modified": "2019-08-21 22:16:25",
+                "equipmentNo": 1003,
+                "name": "主席台返看显示器1",
+                "locationId": 3,
+                "equipmentId": 2,
+                "usedTime": 1,
+                "presentStatueId": 0,
+                "useNumber": 0,
+                "failureNumber": 0,
+                "whetherMonitor": 0,
+                "meetingRoom": "大报告厅",
+                "categoryName": "显示器"
+            },
+            {
+                "id": 4,
+                "enabled": 1,
+                "creator": 1,
+                "modifier": 1,
+                "created": "2019-08-21 03:37:04",
+                "modified": "2019-08-21 22:16:34",
+                "equipmentNo": 1004,
+                "name": "120寸投影幕",
+                "locationId": 3,
+                "equipmentId": 9,
+                "usedTime": 1,
+                "presentStatueId": 0,
+                "useNumber": 0,
+                "failureNumber": 0,
+                "whetherMonitor": 0,
+                "meetingRoom": "大报告厅",
+                "categoryName": "投影幕"
+            },
+            {
+                "id": 50,
+                "enabled": 1,
+                "creator": 1,
+                "modifier": 1,
+                "created": "2019-08-21 06:38:22",
+                "modified": "2019-08-21 22:16:42",
+                "equipmentNo": 1005,
+                "name": "BENQ高清投影机",
+                "locationId": 3,
+                "equipmentId": 4,
+                "usedTime": 1,
+                "presentStatueId": 0,
+                "useNumber": 0,
+                "failureNumber": 0,
+                "whetherMonitor": 1,
+                "meetingRoom": "大报告厅",
+                "categoryName": "投影机"
+            }
+            ]
+            }
 
 ## 品牌管理
 + Data
