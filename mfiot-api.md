@@ -1889,6 +1889,6 @@
 + Parameters
     + equipNo (int) 设备码
     + status  (int) 0关闭状态 1 正常状态  2为故障状态  3为未知状态
-    + type (int)  type=0表示是测试，type=1表示在生产环境
+    + type (int)  0 测试，1生产环境 (默认值为1)
 
 + Response 200
