@@ -54,6 +54,9 @@
     + 查询品牌列表
     + 通过名字查询品牌
 
++ 2019年8月25日
+    + 设备开关控制按钮
+
 ## 图片上传
 ### 图片上传接口 [POST] /fileUpload
 
@@ -1877,4 +1880,15 @@
             ]
             }
 
+### 设备开关控制按钮   /control/{equipNo}
+
++ Description
+    + [MUST] authenticated
+    + [MUST] ROLE_ADMIN
     
++ Parameters
+    + equipNo (int) 设备码
+    + status  (int) 0关闭状态 1 正常状态  2为故障状态  3为未知状态
+    + type (int)  type=0表示是测试，type=1表示在生产环境
+
++ Response 200
