@@ -1880,7 +1880,7 @@
             ]
             }
 
-### 设备开关控制按钮   /control/{equipNo}
+### 设备开关控制按钮 [GET]  /control/{equipNo}
 
 + Description
     + [MUST] authenticated
