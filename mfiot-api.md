@@ -1341,7 +1341,8 @@
         {
         "data": {
             "Cookie": "JSESSIONID=3393B0F48BF7C5B943A0F804871FA660",
-            "userid": 39
+            "userid": 39,
+            "role":1
         }
         }
     
